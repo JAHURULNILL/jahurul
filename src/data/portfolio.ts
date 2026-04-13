@@ -2,7 +2,7 @@ export const person = {
   name: "Jahurul Haque Nill",
   brand: "Zahurul",
   role: "Student | Prompt Engineer | Digital Marketer",
-  email: "jahurulhaquenill@gmail.com",
+  email: "jahurul4q@gmail.com",
   location: "Bangladesh",
   photo:
     "https://raw.githubusercontent.com/JAHURULNILL/portfolio/main/file_0000000023fc720babf6f02003b2ab93.png",
@@ -72,89 +72,58 @@ export const whoAmIBlocks = [
 export const skills = [
   {
     title: "Prompt Engineering",
-    description: "Designing structured prompts that produce cleaner outputs, clearer logic, and better AI guidance.",
-    kicker: "prompt",
-    glow: "rgba(0,255,163,0.18)",
+    items: ["Structured prompting", "Output logic", "Prompt optimization", "AI instruction design"],
   },
   {
     title: "AI Tools",
-    description: "Exploring practical AI workflows that improve speed, creativity, and digital problem solving.",
-    kicker: "ai",
-    glow: "rgba(56,189,248,0.18)",
+    items: ["Workflow exploration", "Tool chaining", "Creative automation", "AI-assisted research"],
   },
   {
     title: "Digital Marketing",
-    description: "Balancing strategy and presentation so content and campaigns feel more intentional and effective.",
-    kicker: "growth",
-    glow: "rgba(89,104,255,0.18)",
+    items: ["Content direction", "Campaign thinking", "Audience clarity", "Digital positioning"],
   },
   {
     title: "Frontend Development",
-    description: "Learning to build responsive, polished interfaces with clean structure, smooth motion, and premium detail.",
-    kicker: "frontend",
-    glow: "rgba(192,168,255,0.18)",
+    items: ["React & TypeScript", "Tailwind CSS", "Responsive UI", "Interaction polish"],
   },
   {
     title: "Problem Solving",
-    description: "Breaking down ideas thoughtfully and finding practical ways to turn concepts into useful outcomes.",
-    kicker: "logic",
-    glow: "rgba(0,255,163,0.16)",
+    items: ["Clear breakdowns", "Practical solutions", "Creative thinking", "Continuous learning"],
   },
 ];
 
 export const projects = [
   {
     title: "Prompt Workspace",
-    description:
-      "A concept for organizing reusable AI prompt systems, output patterns, and structured idea flows inside a cleaner developer-style interface.",
-    tags: ["React", "TypeScript", "AI Workflow"],
-    kicker: "featured concept",
-    year: "2026",
-    meta: "System thinking for better prompt quality",
+    items: ["Reusable prompt systems", "Structured output patterns", "Cleaner AI workflow design"],
   },
   {
     title: "Digital Growth Landing",
-    description:
-      "A premium landing experience focused on stronger visual trust, modern layout discipline, and smoother conversions for digital services.",
-    tags: ["Tailwind", "UX", "Marketing"],
-    kicker: "ui case",
-    year: "2026",
-    meta: "Premium presentation with stronger clarity",
+    items: ["Premium landing presentation", "Better trust and clarity", "Smoother digital conversion flow"],
   },
   {
     title: "Creative Frontend Lab",
-    description:
-      "An ongoing space for practicing modern frontend builds, dark developer-inspired visuals, and refined motion interactions across devices.",
-    tags: ["Framer Motion", "Portfolio", "Responsive"],
-    kicker: "learning build",
-    year: "2026",
-    meta: "Hands-on exploration with polished execution",
+    items: ["Dark UI practice builds", "Responsive layout refinement", "Motion and interaction polish"],
   },
 ];
 
 export const contactLinks = [
   {
     label: "Email",
-    caption: "Start a conversation directly",
+    caption: "jahurul4q@gmail.com",
     href: `mailto:${person.email}`,
     external: false,
   },
   {
     label: "GitHub",
-    caption: "See my public work and profile",
+    caption: "JAHURULNILL",
     href: person.github,
     external: true,
   },
   {
     label: "Facebook",
-    caption: "Connect on social",
+    caption: "error.nill",
     href: person.facebook,
-    external: true,
-  },
-  {
-    label: "LinkedIn",
-    caption: "Professional profile",
-    href: person.linkedin,
     external: true,
   },
 ];

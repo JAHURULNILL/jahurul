@@ -1,16 +1,9 @@
 import { motion } from "framer-motion";
-import { person, whoAmIBlocks } from "../data/portfolio";
-import { useRotatingTypewriter } from "../hooks/useRotatingTypewriter";
+import { person } from "../data/portfolio";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
 
 export function WhoAmISection() {
-  const typedProfile = useRotatingTypewriter(whoAmIBlocks, {
-    typingSpeed: 16,
-    deletingSpeed: 8,
-    pauseDuration: 2400,
-  });
-
   return (
     <section id="about" className="scroll-mt-28 px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
       <div className="mx-auto max-w-7xl">
@@ -22,62 +15,65 @@ export function WhoAmISection() {
           />
         </Reveal>
 
-        <div className="mt-10 grid gap-6 lg:grid-cols-[0.88fr_1.12fr] lg:items-stretch">
+        <div className="mt-10 grid gap-6">
           <Reveal delay={0.08}>
             <motion.div
               whileHover={{ y: -8 }}
-              className="group relative h-full overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(11,17,28,0.86),rgba(7,12,20,0.72))] p-4 shadow-[0_26px_70px_rgba(0,0,0,0.28)]"
+              className="group relative overflow-hidden rounded-[2rem] border border-[rgba(106,126,170,0.22)] bg-[linear-gradient(180deg,#1d2739_0%,#212d41_100%)] p-5 shadow-[0_26px_70px_rgba(0,0,0,0.28)] sm:p-6"
             >
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(0,255,163,0.12),transparent_34%),radial-gradient(circle_at_bottom_right,rgba(40,78,255,0.1),transparent_30%)] opacity-70 transition duration-500 group-hover:opacity-100" />
-              <div className="relative h-full overflow-hidden rounded-[1.6rem] border border-white/8 bg-[#09111d] p-2">
-                <img
-                  src={person.photo}
-                  alt={person.name}
-                  className="h-full min-h-[21rem] w-full rounded-[1.2rem] object-cover transition duration-500 group-hover:scale-[1.03]"
-                />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,255,163,0.09),transparent_26%),radial-gradient(circle_at_bottom_right,rgba(120,146,255,0.1),transparent_32%)] opacity-80 transition duration-500 group-hover:opacity-100" />
+              <div className="relative mb-5 flex items-center gap-2.5 border-b border-[rgba(140,156,194,0.14)] pb-4">
+                <span className="h-3 w-3 rounded-full bg-[#62708f]" />
+                <span className="h-3 w-3 rounded-full bg-[#62708f]" />
               </div>
-            </motion.div>
-          </Reveal>
 
-          <Reveal delay={0.16}>
-            <motion.div
-              whileHover={{ y: -8 }}
-              className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(12,19,32,0.8),rgba(9,14,24,0.68))] p-5 shadow-[0_26px_70px_rgba(0,0,0,0.28)] sm:p-6"
-            >
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,255,163,0.08),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(120,146,255,0.1),transparent_34%)] opacity-80 transition duration-500 group-hover:opacity-100" />
-              <div className="relative flex items-center justify-between gap-3 border-b border-white/8 pb-4">
-                <div>
-                  <p className="font-mono text-[0.72rem] uppercase tracking-[0.34em] text-[var(--accent-soft)]">
-                    &gt; whoami
+              <div className="relative flex flex-col gap-5 lg:flex-row lg:items-center">
+                <div className="overflow-hidden rounded-[1.35rem] border border-[rgba(140,156,194,0.14)] bg-[rgba(255,255,255,0.03)] p-2">
+                  <img
+                    src={person.photo}
+                    alt={person.name}
+                    className="h-44 w-36 rounded-[1rem] object-cover transition duration-500 group-hover:scale-[1.03] sm:h-48 sm:w-40"
+                  />
+                </div>
+
+                <div className="flex-1">
+                  <p className="font-mono text-[0.72rem] uppercase tracking-[0.34em] text-[#9ef8d5]">
+                    live.profile
                   </p>
-                  <h3 className="mt-2 text-2xl font-bold tracking-[-0.05em] text-white">Live profile intro</h3>
+                  <h3 className="mt-3 text-2xl font-bold tracking-[-0.05em] text-white sm:text-[2rem]">
+                    Student | Prompt Engineer | Digital Marketer
+                  </h3>
+                  <p className="mt-4 max-w-2xl text-base leading-7 text-[#b5c0d2]">
+                    I&apos;m building my path through AI tools, creative digital work, and modern frontend learning
+                    with a focus on polished interfaces, thoughtful ideas, and continuous growth.
+                  </p>
                 </div>
-                <div className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 font-mono text-[0.7rem] tracking-[0.22em] text-white/58">
-                  profile.log
-                </div>
-              </div>
-
-              <div className="mt-5 min-h-[19rem] rounded-[1.5rem] border border-white/8 bg-[rgba(4,8,15,0.84)] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)] sm:p-5">
-                <pre className="font-mono text-[0.8rem] leading-7 whitespace-pre-wrap break-words text-white/76 sm:text-[0.88rem]">
-                  {typedProfile}
-                  <span className="terminal-cursor" aria-hidden="true">
-                    |
-                  </span>
-                </pre>
-              </div>
-
-              <div className="mt-5 grid gap-3 sm:grid-cols-3">
-                {["Student mindset", "AI-driven creativity", "Modern frontend growth"].map((item) => (
-                  <div
-                    key={item}
-                    className="rounded-[1.1rem] border border-white/8 bg-white/[0.03] px-4 py-3 text-sm text-white/78 transition duration-300 group-hover:border-white/12"
-                  >
-                    {item}
-                  </div>
-                ))}
               </div>
             </motion.div>
           </Reveal>
+
+          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+            {[
+              ["Focus", "AI tools, prompt writing, frontend learning, and modern digital creation."],
+              ["Location", person.location],
+              ["Status", "Growing, learning, and building premium digital experiences."],
+            ].map(([title, value], index) => (
+              <Reveal key={title} delay={0.14 + index * 0.06}>
+                <motion.div
+                  whileHover={{ y: -6 }}
+                  className="group relative overflow-hidden rounded-[1.7rem] border border-[rgba(106,126,170,0.22)] bg-[linear-gradient(180deg,#1d2739_0%,#212d41_100%)] p-5 shadow-[0_20px_50px_rgba(0,0,0,0.24)] transition duration-300 hover:border-[var(--accent)]/22"
+                >
+                  <div className="absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100">
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,255,163,0.08),transparent_28%)]" />
+                  </div>
+                  <div className="relative">
+                    <p className="font-mono text-[0.72rem] uppercase tracking-[0.32em] text-[#9ef8d5]">{title}</p>
+                    <p className="mt-4 text-base leading-7 text-[#cfd7e6]">{value}</p>
+                  </div>
+                </motion.div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </div>
     </section>

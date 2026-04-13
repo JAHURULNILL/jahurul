@@ -20,45 +20,30 @@ export function ProjectsSection() {
             <Reveal key={project.title} delay={index * 0.08}>
               <motion.article
                 whileHover={{ y: -10 }}
-                className="group relative flex h-full flex-col overflow-hidden rounded-[1.9rem] border border-white/10 bg-[linear-gradient(180deg,rgba(12,18,30,0.92),rgba(7,10,18,0.8))] p-6 shadow-[0_24px_70px_rgba(0,0,0,0.28)] transition duration-300 hover:border-[var(--accent)]/26 hover:shadow-[0_34px_84px_rgba(0,0,0,0.38)]"
+                className="group relative flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-[rgba(106,126,170,0.22)] bg-[linear-gradient(180deg,#1d2739_0%,#212d41_100%)] p-6 shadow-[0_24px_70px_rgba(0,0,0,0.28)] transition duration-300 hover:border-[var(--accent)]/24 hover:shadow-[0_34px_84px_rgba(0,0,0,0.38)]"
               >
                 <div className="absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100">
-                  <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,255,163,0.06),transparent_32%,transparent)]" />
-                  <div className="absolute right-[-2rem] top-[-2rem] h-36 w-36 rounded-full bg-[radial-gradient(circle,_rgba(0,255,163,0.18),_transparent_68%)] blur-2xl" />
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(0,255,163,0.08),transparent_26%)]" />
                 </div>
 
                 <div className="relative flex h-full flex-col">
-                  <div className="flex items-start justify-between gap-4">
-                    <div>
-                      <p className="font-mono text-[0.68rem] uppercase tracking-[0.3em] text-[var(--accent-soft)]">
-                        {project.kicker}
-                      </p>
-                      <h3 className="mt-4 text-2xl font-bold tracking-[-0.05em] text-white">{project.title}</h3>
-                    </div>
-                    <span className="inline-flex rounded-full border border-white/8 bg-white/[0.04] px-3 py-1 text-[0.72rem] text-white/66">
-                      {project.year}
-                    </span>
-                  </div>
+                  <h3 className="font-mono text-[1.05rem] font-medium tracking-[0.02em] text-[var(--accent)] sm:text-[1.12rem]">
+                    {project.title}
+                  </h3>
 
-                  <p className="mt-5 flex-1 text-sm leading-7 text-[var(--muted)]">{project.description}</p>
-
-                  <div className="mt-6 flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="rounded-full border border-white/8 bg-white/[0.04] px-3 py-1.5 text-[0.73rem] text-white/72 transition duration-300 group-hover:border-white/12 group-hover:text-white/84"
-                      >
-                        {tag}
-                      </span>
+                  <div className="mt-8 flex flex-1 flex-col gap-5">
+                    {project.items.map((item) => (
+                      <div key={item} className="flex items-center justify-between gap-4">
+                        <p className="text-[1.02rem] font-medium tracking-[-0.02em] text-[#d0d8e6] sm:text-[1.08rem]">
+                          {item}
+                        </p>
+                        <span className="h-[5px] w-20 rounded-full bg-[var(--accent)] shadow-[0_0_16px_rgba(0,255,163,0.18)] sm:w-24" />
+                      </div>
                     ))}
                   </div>
 
-                  <div className="mt-6 flex items-center justify-between border-t border-white/8 pt-4 text-sm text-white/76">
-                    <span>{project.meta}</span>
-                    <span className="inline-flex items-center gap-2 text-[var(--accent-soft)] transition duration-300 group-hover:translate-x-1">
-                      Explore
-                      <span aria-hidden="true">↗</span>
-                    </span>
+                  <div className="pointer-events-none absolute bottom-5 left-5 h-14 w-14 rounded-full border border-[rgba(0,255,163,0.38)] opacity-0 transition duration-500 group-hover:opacity-100">
+                    <span className="absolute left-1/2 top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[var(--accent)] shadow-[0_0_18px_rgba(0,255,163,0.36)]" />
                   </div>
                 </div>
               </motion.article>

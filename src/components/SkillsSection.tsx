@@ -20,20 +20,30 @@ export function SkillsSection() {
             <Reveal key={skill.title} delay={index * 0.06}>
               <motion.article
                 whileHover={{ y: -8 }}
-                className="group relative h-full overflow-hidden rounded-[1.75rem] border border-white/10 bg-[linear-gradient(180deg,rgba(12,18,29,0.9),rgba(8,12,20,0.72))] p-5 shadow-[0_22px_60px_rgba(0,0,0,0.24)] transition duration-300 hover:border-[var(--accent)]/26 hover:shadow-[0_30px_70px_rgba(0,0,0,0.34)]"
+                className="group relative h-full overflow-hidden rounded-[1.75rem] border border-[rgba(106,126,170,0.22)] bg-[linear-gradient(180deg,#1d2739_0%,#212d41_100%)] p-6 shadow-[0_22px_60px_rgba(0,0,0,0.24)] transition duration-300 hover:border-[var(--accent)]/24 hover:shadow-[0_30px_70px_rgba(0,0,0,0.34)]"
               >
-                <div
-                  className="absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100"
-                  style={{
-                    background: `radial-gradient(circle at top right, ${skill.glow}, transparent 45%)`,
-                  }}
-                />
-                <div className="relative">
-                  <div className="inline-flex rounded-full border border-white/8 bg-white/[0.03] px-3 py-1 font-mono text-[0.68rem] uppercase tracking-[0.28em] text-[var(--accent-soft)]">
-                    {skill.kicker}
+                <div className="absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100">
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(0,255,163,0.08),transparent_26%)]" />
+                </div>
+                <div className="relative flex h-full flex-col">
+                  <h3 className="font-mono text-[1.05rem] font-medium tracking-[0.02em] text-[var(--accent)] sm:text-[1.12rem]">
+                    {skill.title}
+                  </h3>
+
+                  <div className="mt-8 flex flex-1 flex-col gap-5">
+                    {skill.items.map((item) => (
+                      <div key={item} className="flex items-center justify-between gap-4">
+                        <p className="text-[1.05rem] font-medium tracking-[-0.02em] text-[#d0d8e6] sm:text-[1.12rem]">
+                          {item}
+                        </p>
+                        <span className="h-[5px] w-20 rounded-full bg-[var(--accent)] shadow-[0_0_16px_rgba(0,255,163,0.18)] sm:w-24" />
+                      </div>
+                    ))}
                   </div>
-                  <h3 className="mt-5 text-xl font-bold tracking-[-0.04em] text-white">{skill.title}</h3>
-                  <p className="mt-3 text-sm leading-6 text-[var(--muted)]">{skill.description}</p>
+
+                  <div className="pointer-events-none absolute bottom-5 left-5 h-14 w-14 rounded-full border border-[rgba(0,255,163,0.38)] opacity-0 transition duration-500 group-hover:opacity-100">
+                    <span className="absolute left-1/2 top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[var(--accent)] shadow-[0_0_18px_rgba(0,255,163,0.36)]" />
+                  </div>
                 </div>
               </motion.article>
             </Reveal>
