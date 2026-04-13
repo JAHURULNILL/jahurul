@@ -78,23 +78,48 @@ export const profileIntroBlocks = [
 export const skills = [
   {
     title: "Prompt Engineering",
-    items: ["Structured prompting", "Output logic", "Prompt optimization", "AI instruction design"],
+    items: [
+      { label: "Structured prompting", width: "w-24 sm:w-28" },
+      { label: "Output logic", width: "w-18 sm:w-20" },
+      { label: "Prompt optimization", width: "w-20 sm:w-24" },
+      { label: "AI instruction design", width: "w-16 sm:w-18" },
+    ],
   },
   {
     title: "AI Tools",
-    items: ["Workflow exploration", "Tool chaining", "Creative automation", "AI-assisted research"],
+    items: [
+      { label: "Workflow exploration", width: "w-22 sm:w-26" },
+      { label: "Tool chaining", width: "w-17 sm:w-20" },
+      { label: "Creative automation", width: "w-19 sm:w-22" },
+      { label: "AI-assisted research", width: "w-14 sm:w-16" },
+    ],
   },
   {
     title: "Digital Marketing",
-    items: ["Content direction", "Campaign thinking", "Audience clarity", "Digital positioning"],
+    items: [
+      { label: "Content direction", width: "w-21 sm:w-24" },
+      { label: "Campaign thinking", width: "w-18 sm:w-21" },
+      { label: "Audience clarity", width: "w-15 sm:w-18" },
+      { label: "Digital positioning", width: "w-20 sm:w-23" },
+    ],
   },
   {
     title: "Frontend Development",
-    items: ["React & TypeScript", "Tailwind CSS", "Responsive UI", "Interaction polish"],
+    items: [
+      { label: "React & TypeScript", width: "w-23 sm:w-27" },
+      { label: "Tailwind CSS", width: "w-20 sm:w-24" },
+      { label: "Responsive UI", width: "w-16 sm:w-19" },
+      { label: "Interaction polish", width: "w-18 sm:w-22" },
+    ],
   },
   {
     title: "Problem Solving",
-    items: ["Clear breakdowns", "Practical solutions", "Creative thinking", "Continuous learning"],
+    items: [
+      { label: "Clear breakdowns", width: "w-19 sm:w-22" },
+      { label: "Practical solutions", width: "w-23 sm:w-26" },
+      { label: "Creative thinking", width: "w-17 sm:w-20" },
+      { label: "Continuous learning", width: "w-21 sm:w-24" },
+    ],
   },
 ];
 

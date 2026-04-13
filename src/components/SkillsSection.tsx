@@ -32,11 +32,13 @@ export function SkillsSection() {
 
                   <div className="mt-8 flex flex-1 flex-col gap-5">
                     {skill.items.map((item) => (
-                      <div key={item} className="flex items-center justify-between gap-4">
+                      <div key={item.label} className="flex items-center justify-between gap-4">
                         <p className="text-[1.05rem] font-medium tracking-[-0.02em] text-[#d0d8e6] sm:text-[1.12rem]">
-                          {item}
+                          {item.label}
                         </p>
-                        <span className="h-[5px] w-20 rounded-full bg-[var(--accent)] shadow-[0_0_16px_rgba(0,255,163,0.18)] sm:w-24" />
+                        <span
+                          className={`h-[5px] rounded-full bg-[var(--accent)] shadow-[0_0_16px_rgba(0,255,163,0.18)] ${item.width}`}
+                        />
                       </div>
                     ))}
                   </div>
