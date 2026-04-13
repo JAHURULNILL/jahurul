@@ -6,6 +6,7 @@ import { HeroHeading } from "./components/HeroHeading";
 import { HeroTerminal } from "./components/HeroTerminal";
 import { Navbar } from "./components/Navbar";
 import { ProjectsSection } from "./components/ProjectsSection";
+import { QuickContactPopup } from "./components/QuickContactPopup";
 import { SkillsSection } from "./components/SkillsSection";
 import { WhoAmISection } from "./components/WhoAmISection";
 import { navLinks, person } from "./data/portfolio";
@@ -140,6 +141,7 @@ export default function App() {
       </main>
 
       <Footer />
+      <QuickContactPopup />
     </div>
   );
 }
