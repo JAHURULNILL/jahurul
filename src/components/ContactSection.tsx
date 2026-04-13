@@ -59,7 +59,7 @@ export function ContactSection() {
               </p>
             </div>
 
-            <div className="mx-auto mt-10 grid max-w-4xl gap-4 md:grid-cols-3">
+            <div className="mx-auto mt-10 grid max-w-4xl gap-3 md:grid-cols-3">
               {contactLinks.map((link, index) => (
                 <Reveal key={link.label} delay={index * 0.06}>
                   <motion.a
@@ -69,7 +69,7 @@ export function ContactSection() {
                     whileHover={{ y: -5 }}
                     whileTap={{ scale: 0.985 }}
                     className={[
-                      "group relative flex min-h-[124px] items-center justify-between gap-4 overflow-hidden rounded-[1rem] border px-5 py-5 shadow-[0_18px_46px_rgba(0,0,0,0.18)] transition duration-300",
+                      "group relative flex min-h-[104px] items-center justify-between gap-3 overflow-hidden rounded-[0.9rem] border px-4 py-4 shadow-[0_18px_46px_rgba(0,0,0,0.18)] transition duration-300",
                       link.label === "Email"
                         ? "border-[var(--accent)]/24 bg-[linear-gradient(135deg,rgba(26,198,97,0.98),rgba(41,218,121,0.92))] text-white shadow-[0_20px_44px_rgba(37,207,99,0.24)] hover:shadow-[0_26px_54px_rgba(37,207,99,0.3)]"
                         : "border-[rgba(106,126,170,0.2)] bg-[linear-gradient(180deg,rgba(29,39,57,0.96),rgba(27,35,51,0.96))] text-white hover:border-[var(--accent)]/16 hover:shadow-[0_24px_58px_rgba(0,0,0,0.24)]",
@@ -87,7 +87,7 @@ export function ContactSection() {
                     </span>
                     <span
                       className={[
-                        "relative flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border",
+                        "relative flex h-12 w-12 shrink-0 items-center justify-center rounded-[0.95rem] border",
                         link.label === "Email"
                           ? "border-white/16 bg-white/10 text-white"
                           : "border-white/10 bg-white/[0.04] text-white/92",
@@ -96,16 +96,16 @@ export function ContactSection() {
                       <ContactIcon label={link.label} />
                     </span>
                     <span className="relative flex-1 text-left">
-                      <span className="block font-mono text-[0.68rem] uppercase tracking-[0.3em] text-white/55">
+                      <span className="block font-mono text-[0.62rem] uppercase tracking-[0.26em] text-white/55">
                         Contact
                       </span>
-                      <span className="mt-2 block text-[1.55rem] font-semibold tracking-[-0.04em] text-white">
+                      <span className="mt-1.5 block text-[1.28rem] font-semibold tracking-[-0.04em] text-white">
                         {link.label}
                       </span>
                     </span>
                     <span
                       className={[
-                        "relative flex h-12 w-12 items-center justify-center rounded-full border transition duration-300 group-hover:translate-x-1",
+                        "relative flex h-10 w-10 items-center justify-center rounded-full border transition duration-300 group-hover:translate-x-1",
                         link.label === "Email" ? "text-white" : "text-[var(--accent-soft)]",
                         link.label === "Email"
                           ? "border-white/14 bg-white/8"
