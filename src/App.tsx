@@ -122,12 +122,15 @@ export default function App() {
       </AnimatePresence>
 
       <main className="relative z-10">
-        <section id="home" className="mx-auto flex w-full max-w-7xl flex-col px-4 pb-10 pt-28 sm:px-6 lg:px-8">
-          <HeroTerminal />
-        </section>
-
-        <section className="mx-auto w-full max-w-7xl px-4 pb-6 sm:px-6 lg:px-8">
-          <HeroHeading />
+        <section id="home" className="mx-auto w-full max-w-7xl px-4 pb-12 pt-28 sm:px-6 lg:px-8">
+          <div className="grid items-start gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-12">
+            <div className="order-2 lg:order-1">
+              <HeroHeading />
+            </div>
+            <div className="order-1 lg:order-2">
+              <HeroTerminal />
+            </div>
+          </div>
         </section>
 
         <WhoAmISection />
