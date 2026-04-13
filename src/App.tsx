@@ -17,7 +17,7 @@ export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    document.title = "Jahurul Haque Nill | Premium Developer Portfolio";
+    document.title = "Zahurul Haque Nill | Premium Developer Portfolio";
   }, []);
 
   useEffect(() => {

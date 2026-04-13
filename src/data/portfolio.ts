@@ -1,5 +1,5 @@
 export const person = {
-  name: "Jahurul Haque Nill",
+  name: "Zahurul Haque Nill",
   brand: "Zahurul",
   role: "Student | Prompt Engineer | Digital Marketer",
   email: "jahurul4q@gmail.com",
@@ -47,7 +47,7 @@ export const heroTerminalBlocks = [
 export const whoAmIBlocks = [
   [
     "identity.md",
-    "Jahurul Haque Nill",
+    "Zahurul Haque Nill",
     "Student",
     "Prompt Engineer",
     "Digital Marketer",
