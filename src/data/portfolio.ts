@@ -126,15 +126,30 @@ export const skills = [
 export const projects = [
   {
     title: "Prompt Workspace",
-    items: ["Reusable prompt systems", "Structured output patterns", "Cleaner AI workflow design"],
+    eyebrow: "AI System Concept",
+    summary:
+      "A premium concept for organizing reusable prompts, response structures, and cleaner AI workflows inside a calm, developer-inspired interface.",
+    tags: ["Prompt Design", "Workflow", "UI System"],
+    accent: "from-[rgba(0,255,163,0.18)] to-transparent",
+    meta: "Reusable prompt architecture",
   },
   {
     title: "Digital Growth Landing",
-    items: ["Premium landing presentation", "Better trust and clarity", "Smoother digital conversion flow"],
+    eyebrow: "Marketing Experience",
+    summary:
+      "A polished landing page direction focused on trust, visual hierarchy, and stronger digital presentation for premium services and modern brands.",
+    tags: ["Landing Page", "UX", "Brand Feel"],
+    accent: "from-[rgba(101,163,255,0.18)] to-transparent",
+    meta: "Clearer conversion storytelling",
   },
   {
     title: "Creative Frontend Lab",
-    items: ["Dark UI practice builds", "Responsive layout refinement", "Motion and interaction polish"],
+    eyebrow: "Practice & Exploration",
+    summary:
+      "An ongoing frontend lab where dark UI systems, responsive layout discipline, and refined motion ideas are explored and improved across devices.",
+    tags: ["React", "Responsive", "Motion"],
+    accent: "from-[rgba(192,168,255,0.16)] to-transparent",
+    meta: "Refined visual experimentation",
   },
 ];
 
