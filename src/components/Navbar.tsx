@@ -29,7 +29,7 @@ export function Navbar({
         className={[
           "border-b backdrop-blur-2xl transition duration-300",
           isScrolled
-            ? "border-white/6 bg-[rgba(9,15,28,0.72)] shadow-[0_14px_30px_rgba(0,0,0,0.14)]"
+            ? "border-[rgba(126,150,196,0.12)] bg-[linear-gradient(180deg,rgba(10,19,33,0.76),rgba(8,15,28,0.7))] shadow-[0_14px_30px_rgba(0,0,0,0.14)]"
             : "border-white/8 bg-[rgba(9,15,28,0.94)] shadow-[0_18px_40px_rgba(0,0,0,0.2)]",
         ].join(" ")}
       >
