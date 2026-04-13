@@ -5,7 +5,7 @@ export const person = {
   email: "jahurul4q@gmail.com",
   location: "Bangladesh",
   photo:
-    "https://raw.githubusercontent.com/JAHURULNILL/portfolio/main/file_0000000023fc720babf6f02003b2ab93.png",
+    "https://raw.githubusercontent.com/JAHURULNILL/jahurul/refs/heads/main/zahurul_pic.png",
   github: "https://github.com/JAHURULNILL",
   facebook: "https://fb.com/error.nill",
   linkedin: "https://www.linkedin.com/",

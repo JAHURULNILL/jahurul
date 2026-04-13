@@ -25,12 +25,13 @@ export function WhoAmISection() {
                 <span className="h-3 w-3 rounded-full bg-[#62708f]" />
               </div>
 
-              <div className="relative flex flex-col gap-5 lg:flex-row lg:items-center">
-                <div className="overflow-hidden rounded-[1.35rem] border border-[rgba(140,156,194,0.14)] bg-[rgba(255,255,255,0.03)] p-2">
+              <div className="relative flex flex-col gap-6 lg:flex-row lg:items-center">
+                <div className="relative overflow-hidden rounded-[1.45rem] border border-[rgba(140,156,194,0.16)] bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02))] p-2.5 shadow-[0_18px_40px_rgba(0,0,0,0.18)]">
+                  <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_42%)]" />
                   <img
                     src={person.photo}
                     alt={person.name}
-                    className="h-44 w-36 rounded-[1rem] object-cover transition duration-500 group-hover:scale-[1.03] sm:h-48 sm:w-40"
+                    className="relative h-36 w-28 rounded-[1.1rem] object-cover transition duration-500 group-hover:scale-[1.03] sm:h-40 sm:w-32"
                   />
                 </div>
 
