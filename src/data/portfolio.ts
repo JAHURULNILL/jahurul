@@ -156,19 +156,16 @@ export const projects = [
 export const contactLinks = [
   {
     label: "Email",
-    caption: "jahurul4q@gmail.com",
     href: `mailto:${person.email}`,
     external: false,
   },
   {
     label: "GitHub",
-    caption: "JAHURULNILL",
     href: person.github,
     external: true,
   },
   {
     label: "Facebook",
-    caption: "error.nill",
     href: person.facebook,
     external: true,
   },

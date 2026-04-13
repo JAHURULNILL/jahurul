@@ -2,18 +2,50 @@ import { motion } from "framer-motion";
 import { contactLinks } from "../data/portfolio";
 import { Reveal } from "./Reveal";
 
-const contactIcons: Record<string, string> = {
-  Email: "✉",
-  GitHub: "⌘",
-  Facebook: "f",
-};
+function ContactIcon({ label }: { label: string }) {
+  if (label === "Email") {
+    return (
+      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.9">
+        <rect x="3" y="6.75" width="18" height="10.5" rx="2" />
+        <path d="M4.5 8.25 12 13.5l7.5-5.25" />
+      </svg>
+    );
+  }
+
+  if (label === "GitHub") {
+    return (
+      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor" aria-hidden="true">
+        <path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.42-4.04-1.42-.55-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.22 1.84 1.22 1.08 1.82 2.82 1.3 3.5 1 .11-.76.42-1.29.76-1.58-2.66-.3-5.47-1.31-5.47-5.86 0-1.29.47-2.34 1.23-3.16-.12-.3-.53-1.52.12-3.17 0 0 1.01-.32 3.3 1.21a11.7 11.7 0 0 1 6 0c2.28-1.53 3.29-1.21 3.29-1.21.66 1.65.25 2.87.13 3.17.77.82 1.23 1.87 1.23 3.16 0 4.56-2.82 5.56-5.51 5.85.43.37.82 1.1.82 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5Z" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor" aria-hidden="true">
+      <path d="M14 8h3V4h-3c-3.31 0-6 2.69-6 6v2H5v4h3v4h4v-4h3.06l.94-4H12v-2c0-1.1.9-2 2-2Z" />
+    </svg>
+  );
+}
+
+function ArrowIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
+      <path d="M5 12h14" />
+      <path d="m13 6 6 6-6 6" />
+    </svg>
+  );
+}
 
 export function ContactSection() {
   return (
-    <section id="contact" className="scroll-mt-28 px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+    <section
+      id="contact"
+      className="scroll-mt-28 bg-[linear-gradient(180deg,rgba(7,11,19,0)_0%,rgba(9,13,22,0.86)_20%,rgba(10,14,24,0.98)_100%)] px-4 py-16 sm:px-6 lg:px-8 lg:py-24"
+    >
       <div className="mx-auto max-w-7xl">
         <Reveal>
-          <div className="overflow-hidden rounded-[2.2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(10,16,28,0.96),rgba(7,11,18,0.9))] p-6 shadow-[0_28px_80px_rgba(0,0,0,0.34)] sm:p-8 lg:p-10">
+          <div className="relative overflow-hidden rounded-[2.35rem] border border-white/10 bg-[linear-gradient(180deg,rgba(10,16,28,0.8),rgba(8,12,20,0.92))] p-6 shadow-[0_28px_80px_rgba(0,0,0,0.34)] sm:p-8 lg:p-10">
+            <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
             <div className="mx-auto max-w-4xl text-center">
               <p className="font-mono text-[0.72rem] uppercase tracking-[0.34em] text-[var(--accent-soft)]">
                 let&apos;s.talk
@@ -27,7 +59,7 @@ export function ContactSection() {
               </p>
             </div>
 
-            <div className="mx-auto mt-10 grid max-w-4xl gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mx-auto mt-10 grid max-w-4xl gap-4 md:grid-cols-3">
               {contactLinks.map((link, index) => (
                 <Reveal key={link.label} delay={index * 0.06}>
                   <motion.a
@@ -37,40 +69,50 @@ export function ContactSection() {
                     whileHover={{ y: -5 }}
                     whileTap={{ scale: 0.985 }}
                     className={[
-                      "group relative inline-flex items-center justify-center gap-4 overflow-hidden rounded-[1.25rem] border px-6 py-5 shadow-[0_18px_46px_rgba(0,0,0,0.18)] transition duration-300",
+                      "group relative flex min-h-[124px] items-center justify-between gap-4 overflow-hidden rounded-[1.45rem] border px-5 py-5 shadow-[0_18px_46px_rgba(0,0,0,0.18)] transition duration-300",
                       link.label === "Email"
-                        ? "border-[var(--accent)]/30 bg-[linear-gradient(180deg,#25cf63_0%,#1fc85e_100%)] text-white shadow-[0_20px_44px_rgba(37,207,99,0.24)] hover:shadow-[0_26px_54px_rgba(37,207,99,0.3)]"
-                        : "border-[rgba(106,126,170,0.22)] bg-[linear-gradient(180deg,#1d2739_0%,#212d41_100%)] text-white hover:border-[var(--accent)]/18 hover:shadow-[0_24px_58px_rgba(0,0,0,0.24)]",
+                        ? "border-[var(--accent)]/24 bg-[linear-gradient(135deg,rgba(26,198,97,0.98),rgba(41,218,121,0.92))] text-white shadow-[0_20px_44px_rgba(37,207,99,0.24)] hover:shadow-[0_26px_54px_rgba(37,207,99,0.3)]"
+                        : "border-[rgba(106,126,170,0.2)] bg-[linear-gradient(180deg,rgba(29,39,57,0.96),rgba(27,35,51,0.96))] text-white hover:border-[var(--accent)]/16 hover:shadow-[0_24px_58px_rgba(0,0,0,0.24)]",
                     ].join(" ")}
                   >
-                    <span
-                      className={[
-                        "relative flex h-11 w-11 items-center justify-center rounded-xl border text-lg font-semibold",
-                        link.label === "Email"
-                          ? "border-white/16 bg-white/10 text-white"
-                          : "border-white/10 bg-white/[0.04] text-white/90",
-                      ].join(" ")}
-                    >
-                      {contactIcons[link.label]}
-                    </span>
-                    <span className="relative text-left">
-                      <span className="block text-xl font-semibold text-white">{link.label}</span>
+                    <span className="absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100">
                       <span
                         className={[
-                          "mt-1 block text-sm",
-                          link.label === "Email" ? "text-white/90" : "text-[#aeb9cc]",
+                          "absolute inset-0",
+                          link.label === "Email"
+                            ? "bg-[linear-gradient(135deg,rgba(255,255,255,0.08),transparent)]"
+                            : "bg-[radial-gradient(circle_at_top_right,rgba(0,255,163,0.08),transparent_30%)]",
                         ].join(" ")}
-                      >
-                        {link.caption}
+                      />
+                    </span>
+                    <span
+                      className={[
+                        "relative flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border",
+                        link.label === "Email"
+                          ? "border-white/16 bg-white/10 text-white"
+                          : "border-white/10 bg-white/[0.04] text-white/92",
+                      ].join(" ")}
+                    >
+                      <ContactIcon label={link.label} />
+                    </span>
+                    <span className="relative flex-1 text-left">
+                      <span className="block font-mono text-[0.68rem] uppercase tracking-[0.3em] text-white/55">
+                        Contact
+                      </span>
+                      <span className="mt-2 block text-[1.55rem] font-semibold tracking-[-0.04em] text-white">
+                        {link.label}
                       </span>
                     </span>
                     <span
                       className={[
-                        "relative text-xl transition duration-300 group-hover:translate-x-1",
+                        "relative flex h-12 w-12 items-center justify-center rounded-full border transition duration-300 group-hover:translate-x-1",
                         link.label === "Email" ? "text-white" : "text-[var(--accent-soft)]",
+                        link.label === "Email"
+                          ? "border-white/14 bg-white/8"
+                          : "border-white/10 bg-white/[0.03]",
                       ].join(" ")}
                     >
-                      →
+                      <ArrowIcon />
                     </span>
                   </motion.a>
                 </Reveal>
