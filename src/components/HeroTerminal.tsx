@@ -53,14 +53,14 @@ export function HeroTerminal() {
         </div>
 
         <div className="relative px-4 py-5 sm:px-6 sm:py-6 lg:px-8 lg:py-8">
-          <div className="rounded-[1.5rem] border border-[rgba(140,156,194,0.12)] bg-[rgba(255,255,255,0.02)] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)] sm:p-5">
+          <div className="rounded-[1.5rem] border border-[rgba(140,156,194,0.12)] bg-[rgba(255,255,255,0.02)] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)] sm:p-6">
             <div className="font-mono text-[0.9rem] leading-7 text-[var(--accent-soft)] sm:text-[0.96rem]">
               <div className="text-[var(--accent)]">➜ whoami</div>
               <div className="text-[#d7deec]">&quot;{person.name}&quot;</div>
             </div>
 
-            <div className="mt-5 min-h-[18.5rem] rounded-[1.25rem] border border-[rgba(140,156,194,0.13)] bg-[rgba(28,38,57,0.82)] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.03),0_20px_50px_rgba(0,0,0,0.22)] sm:min-h-[20rem] sm:p-5">
-              <pre className="font-mono text-[0.78rem] leading-7 whitespace-pre-wrap break-words text-[#c1cadb] sm:text-[0.86rem]">
+            <div className="mt-5 min-h-[16.5rem] sm:min-h-[18rem]">
+              <pre className="font-mono text-[0.78rem] leading-7 whitespace-pre-wrap break-words text-[#adb8cf] sm:text-[0.86rem]">
                 {typedBlock}
                 <span className="terminal-cursor" aria-hidden="true">
                   |
