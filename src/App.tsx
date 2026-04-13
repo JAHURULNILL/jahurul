@@ -1,0 +1,142 @@
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { ContactSection } from "./components/ContactSection";
+import { Footer } from "./components/Footer";
+import { HeroHeading } from "./components/HeroHeading";
+import { HeroTerminal } from "./components/HeroTerminal";
+import { Navbar } from "./components/Navbar";
+import { ProjectsSection } from "./components/ProjectsSection";
+import { SkillsSection } from "./components/SkillsSection";
+import { WhoAmISection } from "./components/WhoAmISection";
+import { navLinks, person } from "./data/portfolio";
+
+const observedSectionIds = ["about", "skills", "projects", "contact"];
+
+export default function App() {
+  const [activeSection, setActiveSection] = useState("about");
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    document.title = "Jahurul Haque Nill | Premium Developer Portfolio";
+  }, []);
+
+  useEffect(() => {
+    const sections = observedSectionIds
+      .map((id) => document.getElementById(id))
+      .filter((section): section is HTMLElement => Boolean(section));
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleEntry = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+        if (visibleEntry?.target?.id) {
+          setActiveSection(visibleEntry.target.id);
+        }
+      },
+      {
+        rootMargin: "-35% 0px -45% 0px",
+        threshold: [0.2, 0.4, 0.6],
+      },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = mobileMenuOpen ? "hidden" : "";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileMenuOpen]);
+
+  return (
+    <div className="min-h-screen overflow-x-clip bg-[var(--bg)] text-[var(--text)]">
+      <div className="pointer-events-none fixed inset-0 opacity-100">
+        <div className="absolute left-[8%] top-[-6rem] h-80 w-80 rounded-full bg-[radial-gradient(circle,_rgba(0,255,163,0.14),_transparent_68%)] blur-3xl" />
+        <div className="absolute right-[-5rem] top-[18%] h-96 w-96 rounded-full bg-[radial-gradient(circle,_rgba(63,94,251,0.12),_transparent_72%)] blur-3xl" />
+        <div className="absolute bottom-[-8rem] left-1/2 h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,_rgba(11,161,255,0.08),_transparent_72%)] blur-3xl" />
+      </div>
+
+      <div className="site-grid pointer-events-none fixed inset-0" />
+
+      <Navbar
+        links={navLinks}
+        activeSection={activeSection}
+        mobileMenuOpen={mobileMenuOpen}
+        onMobileMenuToggle={() => setMobileMenuOpen((value) => !value)}
+        onNavigate={() => setMobileMenuOpen(false)}
+      />
+
+      <AnimatePresence>
+        {mobileMenuOpen ? (
+          <motion.div
+            key="mobile-menu"
+            className="fixed inset-0 z-40 bg-[rgba(2,6,13,0.82)] backdrop-blur-xl md:hidden"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <motion.div
+              className="mx-4 mt-24 rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,rgba(7,12,22,0.98),rgba(6,10,18,0.92))] p-4 shadow-[0_28px_80px_rgba(0,0,0,0.45)]"
+              initial={{ y: -20, opacity: 0, scale: 0.98 }}
+              animate={{ y: 0, opacity: 1, scale: 1 }}
+              exit={{ y: -12, opacity: 0, scale: 0.98 }}
+              transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <div className="mb-4 flex items-center justify-between rounded-2xl border border-white/8 bg-white/5 px-4 py-3">
+                <div>
+                  <p className="font-mono text-[0.72rem] uppercase tracking-[0.34em] text-[var(--muted)]">
+                    Navigation
+                  </p>
+                  <p className="mt-1 text-sm text-white/88">{person.role}</p>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="rounded-full border border-white/12 bg-white/5 px-3 py-2 text-sm text-white/80 transition hover:border-[var(--accent)]/40 hover:text-white"
+                >
+                  Close
+                </button>
+              </div>
+
+              <nav className="grid gap-2">
+                {navLinks.map((link) => (
+                  <a
+                    key={link.id}
+                    href={link.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="rounded-2xl border border-white/8 bg-white/[0.03] px-4 py-4 text-base font-medium text-white/84 transition duration-300 hover:-translate-y-0.5 hover:border-[var(--accent)]/35 hover:bg-[rgba(0,255,163,0.08)] hover:text-white"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </nav>
+            </motion.div>
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
+
+      <main className="relative z-10">
+        <section id="home" className="mx-auto flex w-full max-w-7xl flex-col px-4 pb-10 pt-28 sm:px-6 lg:px-8">
+          <HeroTerminal />
+        </section>
+
+        <section className="mx-auto w-full max-w-7xl px-4 pb-6 sm:px-6 lg:px-8">
+          <HeroHeading />
+        </section>
+
+        <WhoAmISection />
+        <SkillsSection />
+        <ProjectsSection />
+        <ContactSection />
+      </main>
+
+      <Footer />
+    </div>
+  );
+}
