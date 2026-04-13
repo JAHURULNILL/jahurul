@@ -15,13 +15,14 @@ export function SkillsSection() {
           />
         </Reveal>
 
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-5">
+        <div className="mt-11 grid gap-4 sm:grid-cols-2 xl:grid-cols-5">
           {skills.map((skill, index) => (
             <Reveal key={skill.title} delay={index * 0.06}>
               <motion.article
-                whileHover={{ y: -8 }}
-                className="group relative h-full overflow-hidden rounded-[1.05rem] border border-[rgba(106,126,170,0.22)] bg-[linear-gradient(180deg,#1d2739_0%,#212d41_100%)] p-4 sm:p-5 shadow-[0_22px_60px_rgba(0,0,0,0.24)] transition duration-300 hover:border-[var(--accent)]/24 hover:shadow-[0_30px_70px_rgba(0,0,0,0.34)]"
+                whileHover={{ y: -6 }}
+                className="group relative h-full overflow-hidden rounded-[1.05rem] border border-[rgba(106,126,170,0.22)] bg-[linear-gradient(180deg,#1c2739_0%,#212d41_100%)] p-4 sm:p-5 shadow-[0_22px_60px_rgba(0,0,0,0.24)] transition duration-300 hover:border-[var(--accent)]/24 hover:shadow-[0_30px_70px_rgba(0,0,0,0.34)]"
               >
+                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
                 <div className="absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100">
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(0,255,163,0.08),transparent_26%)]" />
                 </div>

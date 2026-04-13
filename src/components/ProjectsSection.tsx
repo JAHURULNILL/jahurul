@@ -20,8 +20,9 @@ export function ProjectsSection() {
             <Reveal key={project.title} delay={index * 0.08}>
               <motion.article
                 whileHover={{ y: -10 }}
-                className="group relative flex h-full flex-col overflow-hidden rounded-[1.05rem] border border-[rgba(115,132,172,0.18)] bg-[linear-gradient(180deg,rgba(12,18,30,0.96),rgba(11,16,28,0.94))] p-4 sm:p-5 shadow-[0_24px_70px_rgba(0,0,0,0.26)] transition duration-300 hover:border-white/20 hover:shadow-[0_34px_84px_rgba(0,0,0,0.36)]"
+                className="group relative flex h-full flex-col overflow-hidden rounded-[1.05rem] border border-[rgba(115,132,172,0.18)] bg-[linear-gradient(180deg,rgba(13,19,31,0.98),rgba(10,15,25,0.96))] p-4 sm:p-5 shadow-[0_24px_70px_rgba(0,0,0,0.26)] transition duration-300 hover:border-white/20 hover:shadow-[0_34px_84px_rgba(0,0,0,0.36)]"
               >
+                <div className="absolute inset-0 rounded-[1.05rem] shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]" />
                 <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-br opacity-90 transition duration-500 group-hover:opacity-100" />
                 <div
                   className={`absolute inset-x-0 top-0 h-28 bg-gradient-to-br ${project.accent} opacity-80 transition duration-500 group-hover:opacity-100`}
@@ -36,7 +37,7 @@ export function ProjectsSection() {
                       {project.eyebrow}
                     </div>
                     <span className="text-2xl text-white/36 transition duration-300 group-hover:translate-x-1 group-hover:text-white/72">
-                      ↗
+                      &rarr;
                     </span>
                   </div>
 
@@ -44,9 +45,7 @@ export function ProjectsSection() {
                     {project.title}
                   </h3>
 
-                  <p className="mt-3 flex-1 text-[0.92rem] leading-7 text-[#aeb9cc]">
-                    {project.summary}
-                  </p>
+                  <p className="mt-3 flex-1 text-[0.92rem] leading-7 text-[#aeb9cc]">{project.summary}</p>
 
                   <div className="mt-5 flex flex-wrap gap-2">
                     {project.tags.map((tag) => (

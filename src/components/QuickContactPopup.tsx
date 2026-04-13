@@ -36,15 +36,8 @@ export function QuickContactPopup() {
   }, [isMobile]);
 
   const mailtoLink = useMemo(() => {
-    const subject = encodeURIComponent(
-      "Website contact request",
-    );
-    const body = encodeURIComponent(
-      [
-        "Message:",
-        form.message.trim() || "Hello, I would like to talk.",
-      ].join("\n"),
-    );
+    const subject = encodeURIComponent("Website contact request");
+    const body = encodeURIComponent(["Message:", form.message.trim() || "Hello, I would like to talk."].join("\n"));
 
     return `mailto:${person.email}?subject=${subject}&body=${body}`;
   }, [form]);
@@ -60,8 +53,8 @@ export function QuickContactPopup() {
             transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
             className="fixed bottom-4 right-4 z-[70] w-[calc(100vw-2rem)] max-w-[15.75rem] sm:bottom-6 sm:right-6 sm:max-w-[18.5rem]"
           >
-            <div className="relative overflow-hidden rounded-[0.9rem] border border-[rgba(106,126,170,0.24)] bg-[linear-gradient(180deg,rgba(15,22,36,0.97),rgba(10,15,25,0.96))] p-3 shadow-[0_24px_60px_rgba(0,0,0,0.32)] backdrop-blur-xl sm:rounded-[1rem] sm:p-3.5">
-              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(0,255,163,0.08),transparent_30%)]" />
+            <div className="relative overflow-hidden rounded-[0.9rem] border border-[rgba(106,126,170,0.24)] bg-[linear-gradient(180deg,rgba(16,23,38,0.97),rgba(9,14,24,0.96))] p-3 shadow-[0_24px_60px_rgba(0,0,0,0.32)] backdrop-blur-xl sm:rounded-[1rem] sm:p-3.5">
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(0,255,163,0.08),transparent_30%),linear-gradient(180deg,rgba(255,255,255,0.02),transparent_24%)]" />
 
               <div className="relative flex items-start justify-between gap-4">
                 <div>
@@ -76,7 +69,7 @@ export function QuickContactPopup() {
                   className="relative inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-white/70 transition hover:border-[var(--accent)]/25 hover:text-white"
                   aria-label="Close contact popup"
                 >
-                  ×
+                  &times;
                 </button>
               </div>
 

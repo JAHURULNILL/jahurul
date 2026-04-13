@@ -12,10 +12,10 @@ export function SectionHeading({ eyebrow, title, description }: SectionHeadingPr
           {eyebrow}
         </p>
       ) : null}
-      <h2 className={`${eyebrow ? "mt-4" : ""} text-3xl font-bold tracking-[-0.04em] text-white sm:text-4xl lg:text-[3rem]`}>
+      <h2 className={`${eyebrow ? "mt-4" : ""} text-balance text-3xl font-bold tracking-[-0.045em] text-white sm:text-4xl lg:text-[3rem]`}>
         {title}
       </h2>
-      <p className="mt-4 max-w-2xl text-base leading-7 text-[var(--muted)] sm:text-lg">
+      <p className="text-balance mt-4 max-w-2xl text-[0.98rem] leading-8 text-[var(--muted)] sm:text-[1.03rem]">
         {description}
       </p>
     </div>

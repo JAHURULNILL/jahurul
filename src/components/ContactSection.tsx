@@ -40,17 +40,19 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="scroll-mt-28 bg-[linear-gradient(180deg,rgba(7,11,19,0)_0%,rgba(9,13,22,0.86)_20%,rgba(10,14,24,0.98)_100%)] px-4 py-16 sm:px-6 lg:px-8 lg:py-24"
+      className="scroll-mt-28 bg-[linear-gradient(180deg,rgba(7,11,19,0)_0%,rgba(8,12,21,0.74)_16%,rgba(10,14,24,0.98)_42%,rgba(12,17,29,1)_100%)] px-4 py-18 sm:px-6 lg:px-8 lg:py-28"
     >
       <div className="mx-auto max-w-7xl">
         <Reveal>
-          <div className="relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-[linear-gradient(180deg,rgba(10,16,28,0.8),rgba(8,12,20,0.92))] p-6 shadow-[0_28px_80px_rgba(0,0,0,0.34)] sm:p-8 lg:p-10">
+          <div className="relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-[linear-gradient(180deg,rgba(10,16,28,0.68),rgba(8,12,20,0.88))] p-6 shadow-[0_34px_90px_rgba(0,0,0,0.34)] sm:p-8 lg:p-10">
+            <div className="absolute -left-16 top-16 h-40 w-40 rounded-full bg-[radial-gradient(circle,_rgba(0,255,163,0.08),_transparent_70%)] blur-3xl" />
+            <div className="absolute -right-12 bottom-6 h-40 w-40 rounded-full bg-[radial-gradient(circle,_rgba(101,163,255,0.08),_transparent_70%)] blur-3xl" />
             <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
             <div className="mx-auto max-w-4xl text-center">
               <h2 className="text-4xl font-bold tracking-[-0.06em] text-white sm:text-5xl lg:text-[4.6rem]">
                 Let&apos;s Talk
               </h2>
-              <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-[#9aa7c0] sm:text-[1.45rem]">
+              <p className="text-balance mx-auto mt-5 max-w-3xl text-base leading-8 text-[#a0aec6] sm:text-[1.32rem]">
                 If you want to build something modern, polished, and useful, feel free to reach out through the
                 platform that feels easiest for you.
               </p>
@@ -63,13 +65,13 @@ export function ContactSection() {
                     href={link.href}
                     target={link.external ? "_blank" : undefined}
                     rel={link.external ? "noreferrer" : undefined}
-                    whileHover={{ y: -5 }}
+                    whileHover={{ y: -4 }}
                     whileTap={{ scale: 0.985 }}
                     className={[
                       "group relative flex min-h-[104px] items-center justify-between gap-3 overflow-hidden rounded-[0.9rem] border px-4 py-4 shadow-[0_18px_46px_rgba(0,0,0,0.18)] transition duration-300",
                       link.label === "Email"
-                        ? "border-[var(--accent)]/24 bg-[linear-gradient(135deg,rgba(26,198,97,0.98),rgba(41,218,121,0.92))] text-white shadow-[0_20px_44px_rgba(37,207,99,0.24)] hover:shadow-[0_26px_54px_rgba(37,207,99,0.3)]"
-                        : "border-[rgba(106,126,170,0.2)] bg-[linear-gradient(180deg,rgba(29,39,57,0.96),rgba(27,35,51,0.96))] text-white hover:border-[var(--accent)]/16 hover:shadow-[0_24px_58px_rgba(0,0,0,0.24)]",
+                        ? "border-[var(--accent)]/24 bg-[linear-gradient(135deg,rgba(26,198,97,0.96),rgba(41,218,121,0.9))] text-white shadow-[0_20px_44px_rgba(37,207,99,0.2)] hover:shadow-[0_26px_54px_rgba(37,207,99,0.28)]"
+                        : "border-[rgba(106,126,170,0.2)] bg-[linear-gradient(180deg,rgba(29,39,57,0.9),rgba(27,35,51,0.94))] text-white hover:border-[var(--accent)]/16 hover:shadow-[0_24px_58px_rgba(0,0,0,0.24)]",
                     ].join(" ")}
                   >
                     <span className="absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100">
@@ -93,7 +95,7 @@ export function ContactSection() {
                       <ContactIcon label={link.label} />
                     </span>
                     <span className="relative flex-1 text-left">
-                      <span className="block font-mono text-[0.62rem] uppercase tracking-[0.26em] text-white/55">
+                      <span className="block font-mono text-[0.62rem] uppercase tracking-[0.26em] text-white/48">
                         Contact
                       </span>
                       <span className="mt-1.5 block text-[1.28rem] font-semibold tracking-[-0.04em] text-white">

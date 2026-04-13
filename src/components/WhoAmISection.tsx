@@ -19,10 +19,11 @@ export function WhoAmISection() {
           </Reveal>
           <Reveal delay={0.08}>
             <motion.div
-              whileHover={{ y: -8 }}
-              className="group relative overflow-hidden rounded-[1.55rem] border border-[rgba(106,126,170,0.22)] bg-[linear-gradient(180deg,#1d2739_0%,#212d41_100%)] p-5 shadow-[0_26px_70px_rgba(0,0,0,0.28)] sm:p-6"
+              whileHover={{ y: -6 }}
+              className="group relative overflow-hidden rounded-[1.55rem] border border-[rgba(106,126,170,0.22)] bg-[linear-gradient(180deg,#1c2739_0%,#202b3e_100%)] p-5 shadow-[0_26px_70px_rgba(0,0,0,0.28)] sm:p-6"
             >
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,255,163,0.09),transparent_26%),radial-gradient(circle_at_bottom_right,rgba(120,146,255,0.1),transparent_32%)] opacity-80 transition duration-500 group-hover:opacity-100" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,255,163,0.08),transparent_26%),radial-gradient(circle_at_bottom_right,rgba(120,146,255,0.08),transparent_32%)] opacity-80 transition duration-500 group-hover:opacity-100" />
+              <div className="absolute inset-0 rounded-[1.55rem] shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]" />
               <div className="relative mb-5 flex items-center gap-2.5 border-b border-[rgba(140,156,194,0.14)] pb-4">
                 <span className="h-3 w-3 rounded-full bg-[#62708f]" />
                 <span className="h-3 w-3 rounded-full bg-[#62708f]" />
@@ -39,14 +40,14 @@ export function WhoAmISection() {
                 </div>
 
                 <div className="flex-1">
-                  <p className="font-mono text-[1.02rem] font-medium tracking-[0.02em] text-[#9ef8d5] sm:text-[1.12rem]">
+                  <p className="font-mono text-[0.98rem] font-medium tracking-[0.08em] text-[#aef6d7] sm:text-[1.06rem]">
                     Zahurul Haque Nill
                   </p>
-                  <h3 className="mt-3 text-2xl font-bold tracking-[-0.05em] text-white sm:text-[2rem]">
+                  <h3 className="text-balance mt-3 text-2xl font-bold tracking-[-0.05em] text-white sm:text-[2rem]">
                     Student | Prompt Engineer | Digital Marketer
                   </h3>
                   <div className="mt-4 min-h-[7rem] max-w-2xl">
-                    <p className="font-mono text-[0.95rem] leading-8 text-[#b5c0d2] sm:text-[1rem]">
+                    <p className="font-mono text-[0.92rem] leading-8 text-[#b0bdd1] sm:text-[0.98rem]">
                       {typedIntro}
                       <span className="terminal-cursor" aria-hidden="true">
                         |
@@ -65,7 +66,7 @@ export function WhoAmISection() {
               <Reveal key={title} delay={0.14 + index * 0.06}>
                 <motion.div
                   whileHover={{ y: -6 }}
-                  className="group relative overflow-hidden rounded-[1.2rem] border border-[rgba(106,126,170,0.22)] bg-[linear-gradient(180deg,#1d2739_0%,#212d41_100%)] p-5 shadow-[0_20px_50px_rgba(0,0,0,0.24)] transition duration-300 hover:border-[var(--accent)]/22"
+                  className="group relative overflow-hidden rounded-[1.2rem] border border-[rgba(106,126,170,0.22)] bg-[linear-gradient(180deg,#1b2536_0%,#212d41_100%)] p-5 shadow-[0_20px_50px_rgba(0,0,0,0.24)] transition duration-300 hover:border-[var(--accent)]/22"
                 >
                   <div className="absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100">
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,255,163,0.08),transparent_28%)]" />

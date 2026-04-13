@@ -9,7 +9,7 @@ import { ProjectsSection } from "./components/ProjectsSection";
 import { QuickContactPopup } from "./components/QuickContactPopup";
 import { SkillsSection } from "./components/SkillsSection";
 import { WhoAmISection } from "./components/WhoAmISection";
-import { navLinks, person } from "./data/portfolio";
+import { navLinks } from "./data/portfolio";
 
 const observedSectionIds = ["about", "skills", "projects", "contact"];
 
@@ -72,9 +72,10 @@ export default function App() {
   return (
     <div className="min-h-screen overflow-x-clip bg-[var(--bg)] text-[var(--text)]">
       <div className="pointer-events-none fixed inset-0 opacity-100">
-        <div className="absolute left-[8%] top-[-6rem] h-80 w-80 rounded-full bg-[radial-gradient(circle,_rgba(0,255,163,0.14),_transparent_68%)] blur-3xl" />
-        <div className="absolute right-[-5rem] top-[18%] h-96 w-96 rounded-full bg-[radial-gradient(circle,_rgba(63,94,251,0.12),_transparent_72%)] blur-3xl" />
-        <div className="absolute bottom-[-8rem] left-1/2 h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,_rgba(11,161,255,0.08),_transparent_72%)] blur-3xl" />
+        <div className="absolute left-[6%] top-[-7rem] h-[24rem] w-[24rem] rounded-full bg-[radial-gradient(circle,_rgba(0,255,163,0.16),_transparent_68%)] blur-3xl" />
+        <div className="absolute right-[-6rem] top-[12%] h-[28rem] w-[28rem] rounded-full bg-[radial-gradient(circle,_rgba(63,94,251,0.13),_transparent_72%)] blur-3xl" />
+        <div className="absolute left-[22%] top-[34%] h-[18rem] w-[18rem] rounded-full bg-[radial-gradient(circle,_rgba(255,255,255,0.04),_transparent_72%)] blur-3xl" />
+        <div className="absolute bottom-[-8rem] left-1/2 h-[30rem] w-[30rem] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,_rgba(11,161,255,0.08),_transparent_72%)] blur-3xl" />
       </div>
 
       <div className="site-grid pointer-events-none fixed inset-0" />
@@ -98,7 +99,7 @@ export default function App() {
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="mx-4 mt-24 rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,rgba(7,12,22,0.98),rgba(6,10,18,0.92))] p-4 shadow-[0_28px_80px_rgba(0,0,0,0.45)]"
+              className="mx-4 mt-24 rounded-[24px] border border-white/10 bg-[linear-gradient(180deg,rgba(9,14,24,0.98),rgba(7,11,19,0.94))] p-4 shadow-[0_28px_80px_rgba(0,0,0,0.45)]"
               initial={{ y: -20, opacity: 0, scale: 0.98 }}
               animate={{ y: 0, opacity: 1, scale: 1 }}
               exit={{ y: -12, opacity: 0, scale: 0.98 }}
@@ -110,7 +111,7 @@ export default function App() {
                   onClick={() => setMobileMenuOpen(false)}
                   className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/12 bg-white/5 text-base text-white/80 transition hover:border-[var(--accent)]/40 hover:text-white"
                 >
-                  ×
+                  &times;
                 </button>
               </div>
 
