@@ -39,8 +39,8 @@ export function WhoAmISection() {
                 </div>
 
                 <div className="flex-1">
-                  <p className="font-mono text-[0.72rem] uppercase tracking-[0.34em] text-[#9ef8d5]">
-                    live.profile
+                  <p className="font-mono text-[1.02rem] font-medium tracking-[0.02em] text-[#9ef8d5] sm:text-[1.12rem]">
+                    Zahurul Haque Nill
                   </p>
                   <h3 className="mt-3 text-2xl font-bold tracking-[-0.05em] text-white sm:text-[2rem]">
                     Student | Prompt Engineer | Digital Marketer

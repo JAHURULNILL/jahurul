@@ -9,7 +9,7 @@ export function ProjectsSection() {
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <SectionHeading
-            eyebrow="selected.projects"
+            eyebrow=""
             title="Projects"
             description="A selection of concept builds and ongoing work that show how I think about AI, presentation, interaction, and digital clarity."
           />

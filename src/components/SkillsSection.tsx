@@ -9,7 +9,7 @@ export function SkillsSection() {
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <SectionHeading
-            eyebrow="skill.stack"
+            eyebrow=""
             title="Skills"
             description="The skills below reflect the blend of prompt thinking, AI curiosity, marketing perspective, and frontend learning that shapes my work."
           />
