@@ -47,10 +47,7 @@ export function ContactSection() {
           <div className="relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-[linear-gradient(180deg,rgba(10,16,28,0.8),rgba(8,12,20,0.92))] p-6 shadow-[0_28px_80px_rgba(0,0,0,0.34)] sm:p-8 lg:p-10">
             <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
             <div className="mx-auto max-w-4xl text-center">
-              <p className="font-mono text-[0.72rem] uppercase tracking-[0.34em] text-[var(--accent-soft)]">
-                let&apos;s.talk
-              </p>
-              <h2 className="mt-4 text-4xl font-bold tracking-[-0.06em] text-white sm:text-5xl lg:text-[4.6rem]">
+              <h2 className="text-4xl font-bold tracking-[-0.06em] text-white sm:text-5xl lg:text-[4.6rem]">
                 Let&apos;s Talk
               </h2>
               <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-[#9aa7c0] sm:text-[1.45rem]">

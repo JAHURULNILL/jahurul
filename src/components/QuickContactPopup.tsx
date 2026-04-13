@@ -4,17 +4,36 @@ import { person } from "../data/portfolio";
 
 export function QuickContactPopup() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const [form, setForm] = useState({
     message: "",
   });
 
   useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => {
+      window.removeEventListener("resize", checkMobile);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isMobile) {
+      setIsOpen(false);
+      return;
+    }
+
     const timeout = window.setTimeout(() => {
       setIsOpen(true);
     }, 900);
 
     return () => window.clearTimeout(timeout);
-  }, []);
+  }, [isMobile]);
 
   const mailtoLink = useMemo(() => {
     const subject = encodeURIComponent(
