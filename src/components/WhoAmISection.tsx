@@ -1,21 +1,19 @@
 import { motion } from "framer-motion";
-import { person } from "../data/portfolio";
+import { person, profileIntroBlocks } from "../data/portfolio";
+import { useRotatingTypewriter } from "../hooks/useRotatingTypewriter";
 import { Reveal } from "./Reveal";
-import { SectionHeading } from "./SectionHeading";
 
 export function WhoAmISection() {
+  const typedIntro = useRotatingTypewriter(profileIntroBlocks, {
+    typingSpeed: 20,
+    deletingSpeed: 10,
+    pauseDuration: 2200,
+  });
+
   return (
     <section id="about" className="scroll-mt-28 px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
       <div className="mx-auto max-w-7xl">
-        <Reveal>
-          <SectionHeading
-            eyebrow="who.am.i"
-            title="Who am I?"
-            description="I’m Jahurul Haque Nill, a student, prompt engineer, and digital marketer focused on AI tools, frontend growth, and building thoughtful modern digital work."
-          />
-        </Reveal>
-
-        <div className="mt-10 grid gap-6">
+        <div className="grid gap-6">
           <Reveal delay={0.08}>
             <motion.div
               whileHover={{ y: -8 }}
@@ -43,10 +41,14 @@ export function WhoAmISection() {
                   <h3 className="mt-3 text-2xl font-bold tracking-[-0.05em] text-white sm:text-[2rem]">
                     Student | Prompt Engineer | Digital Marketer
                   </h3>
-                  <p className="mt-4 max-w-2xl text-base leading-7 text-[#b5c0d2]">
-                    I&apos;m building my path through AI tools, creative digital work, and modern frontend learning
-                    with a focus on polished interfaces, thoughtful ideas, and continuous growth.
-                  </p>
+                  <div className="mt-4 min-h-[7rem] max-w-2xl">
+                    <p className="font-mono text-[0.95rem] leading-8 text-[#b5c0d2] sm:text-[1rem]">
+                      {typedIntro}
+                      <span className="terminal-cursor" aria-hidden="true">
+                        |
+                      </span>
+                    </p>
+                  </div>
                 </div>
               </div>
             </motion.div>

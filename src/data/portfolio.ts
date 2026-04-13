@@ -69,6 +69,12 @@ export const whoAmIBlocks = [
   ].join("\n"),
 ].map((block) => `> cat ${block}`);
 
+export const profileIntroBlocks = [
+  "I’m building my path through AI tools, creative digital work, and modern frontend learning with a focus on polished experiences.",
+  "I enjoy blending prompt thinking, design awareness, and digital strategy into work that feels clean, useful, and modern.",
+  "My goal is to keep learning, keep improving, and create premium digital experiences with thoughtful execution.",
+];
+
 export const skills = [
   {
     title: "Prompt Engineering",
