@@ -46,15 +46,9 @@ export function QuickContactPopup() {
 
               <div className="relative flex items-start justify-between gap-4">
                 <div>
-                  <p className="font-mono text-[0.68rem] uppercase tracking-[0.3em] text-[var(--accent-soft)]">
-                    quick.contact
-                  </p>
-                  <h3 className="mt-1.5 text-[1rem] font-semibold tracking-[-0.04em] text-white sm:mt-2 sm:text-lg">
+                  <h3 className="text-[0.98rem] font-semibold tracking-[-0.04em] text-white sm:mt-2 sm:text-lg">
                     Need to talk?
                   </h3>
-                  <p className="mt-1 text-[0.78rem] leading-5 text-[#aeb9cc] sm:mt-1.5 sm:text-[0.84rem] sm:leading-6">
-                    Contact, complaint, or anything else. Write a short message and send it.
-                  </p>
                 </div>
 
                 <button
@@ -67,25 +61,25 @@ export function QuickContactPopup() {
                 </button>
               </div>
 
-              <div className="relative mt-2.5 grid gap-2.5 sm:mt-3 sm:gap-3">
+              <div className="relative mt-2 grid gap-2 sm:mt-3 sm:gap-3">
                 <textarea
                   value={form.message}
                   onChange={(event) => setForm((current) => ({ ...current, message: event.target.value }))}
                   placeholder="Write your message..."
-                  className="min-h-[74px] rounded-[0.8rem] border border-white/10 bg-white/[0.03] px-3 py-2.5 text-[0.82rem] text-white outline-none transition placeholder:text-white/34 focus:border-[var(--accent)]/28 sm:min-h-[88px] sm:rounded-[0.85rem] sm:px-3.5 sm:py-3 sm:text-sm"
+                  className="min-h-[64px] rounded-[0.75rem] border border-white/10 bg-white/[0.03] px-3 py-2.5 text-[0.8rem] text-white outline-none transition placeholder:text-white/34 focus:border-[var(--accent)]/28 sm:min-h-[88px] sm:rounded-[0.85rem] sm:px-3.5 sm:py-3 sm:text-sm"
                 />
               </div>
 
-              <div className="relative mt-2.5 flex items-center gap-2 sm:mt-3 sm:gap-2.5">
+              <div className="relative mt-2 flex items-center gap-2 sm:mt-3 sm:gap-2.5">
                 <a
                   href={mailtoLink}
-                  className="inline-flex flex-1 items-center justify-center rounded-[0.8rem] bg-[linear-gradient(135deg,rgba(24,201,103,0.98),rgba(43,220,123,0.92))] px-3 py-2.5 text-[0.8rem] font-semibold text-white shadow-[0_18px_40px_rgba(37,207,99,0.24)] transition hover:translate-y-[-2px] sm:rounded-[0.85rem] sm:px-4 sm:py-3 sm:text-sm"
+                  className="inline-flex flex-1 items-center justify-center rounded-[0.75rem] bg-[linear-gradient(135deg,rgba(24,201,103,0.98),rgba(43,220,123,0.92))] px-3 py-2.5 text-[0.78rem] font-semibold text-white shadow-[0_18px_40px_rgba(37,207,99,0.24)] transition hover:translate-y-[-2px] sm:rounded-[0.85rem] sm:px-4 sm:py-3 sm:text-sm"
                 >
                   Send Message
                 </a>
                 <a
                   href={`mailto:${person.email}`}
-                  className="inline-flex items-center justify-center rounded-[0.8rem] border border-white/10 bg-white/[0.03] px-2.5 py-2.5 text-[0.8rem] font-medium text-white/84 transition hover:border-[var(--accent)]/24 hover:text-white sm:rounded-[0.85rem] sm:px-3 sm:py-3 sm:text-sm"
+                  className="inline-flex items-center justify-center rounded-[0.75rem] border border-white/10 bg-white/[0.03] px-2.5 py-2.5 text-[0.78rem] font-medium text-white/84 transition hover:border-[var(--accent)]/24 hover:text-white sm:rounded-[0.85rem] sm:px-3 sm:py-3 sm:text-sm"
                 >
                   Email
                 </a>
