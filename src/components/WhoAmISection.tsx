@@ -55,11 +55,9 @@ export function WhoAmISection() {
             </motion.div>
           </Reveal>
 
-          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-4 md:max-w-xl">
             {[
               ["Focus", "AI tools, prompt writing, frontend learning, and modern digital creation."],
-              ["Location", person.location],
-              ["Status", "Growing, learning, and building premium digital experiences."],
             ].map(([title, value], index) => (
               <Reveal key={title} delay={0.14 + index * 0.06}>
                 <motion.div
