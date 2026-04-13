@@ -9,12 +9,12 @@ export function HeroHeading() {
         <p className="font-mono text-[0.74rem] uppercase tracking-[0.34em] text-[#9aa7c0]">
           smart.digital.builder
         </p>
-        <h1 className="mt-5 max-w-5xl text-[clamp(2.9rem,8vw,6.1rem)] font-bold leading-[0.92] tracking-[-0.065em] text-white">
-          <span className="block">Building Smart</span>
-          <span className="block bg-[linear-gradient(90deg,#f8fafc_0%,#82f9c8_30%,#8ab4ff_68%,#c0a8ff_100%)] bg-clip-text text-transparent">
+        <h1 className="mt-5 max-w-4xl text-[clamp(2.35rem,6.2vw,4.9rem)] font-bold leading-[0.96] tracking-[-0.055em] text-white">
+          <span className="block text-white/96">Building Smart</span>
+          <span className="block bg-[linear-gradient(90deg,#eef4ff_0%,#9cefcf_34%,#8db6ff_72%,#cdbdff_100%)] bg-clip-text text-transparent">
             Digital &amp; AI
           </span>
-          <span className="block">Experiences.</span>
+          <span className="block text-white/92">Experiences.</span>
         </h1>
         <motion.p
           initial={{ opacity: 0, y: 18 }}
