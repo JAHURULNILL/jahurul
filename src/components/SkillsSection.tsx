@@ -20,7 +20,7 @@ export function SkillsSection() {
             <Reveal key={skill.title} delay={index * 0.06}>
               <motion.article
                 whileHover={{ y: -8 }}
-                className="group relative h-full overflow-hidden rounded-[1.75rem] border border-[rgba(106,126,170,0.22)] bg-[linear-gradient(180deg,#1d2739_0%,#212d41_100%)] p-6 shadow-[0_22px_60px_rgba(0,0,0,0.24)] transition duration-300 hover:border-[var(--accent)]/24 hover:shadow-[0_30px_70px_rgba(0,0,0,0.34)]"
+                className="group relative h-full overflow-hidden rounded-[1.2rem] border border-[rgba(106,126,170,0.22)] bg-[linear-gradient(180deg,#1d2739_0%,#212d41_100%)] p-6 shadow-[0_22px_60px_rgba(0,0,0,0.24)] transition duration-300 hover:border-[var(--accent)]/24 hover:shadow-[0_30px_70px_rgba(0,0,0,0.34)]"
               >
                 <div className="absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100">
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(0,255,163,0.08),transparent_26%)]" />

@@ -20,7 +20,7 @@ export function HeroTerminal() {
       </div>
 
       <motion.div
-        className="group relative overflow-hidden rounded-[2rem] border border-[rgba(106,126,170,0.22)] bg-[linear-gradient(180deg,#1d2739_0%,#212d41_100%)] shadow-[0_30px_90px_rgba(0,0,0,0.42)]"
+        className="group relative overflow-hidden rounded-[1.55rem] border border-[rgba(106,126,170,0.22)] bg-[linear-gradient(180deg,#1d2739_0%,#212d41_100%)] shadow-[0_30px_90px_rgba(0,0,0,0.42)]"
         animate={tilt}
         whileHover={{ y: -6, scale: 1.005 }}
         transition={{ type: "spring", stiffness: 160, damping: 18 }}
@@ -38,7 +38,7 @@ export function HeroTerminal() {
         onMouseLeave={() => setTilt({ rotateX: 0, rotateY: 0 })}
       >
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,255,163,0.13),transparent_24%),radial-gradient(circle_at_top_right,rgba(128,88,255,0.14),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(36,75,255,0.08),transparent_26%)] opacity-85 transition duration-500 group-hover:opacity-100" />
-        <div className="absolute inset-0 rounded-[2rem] shadow-[inset_0_0_0_1px_rgba(126,144,187,0.08),0_0_38px_rgba(0,255,163,0.08),0_0_44px_rgba(116,82,255,0.08)]" />
+        <div className="absolute inset-0 rounded-[1.55rem] shadow-[inset_0_0_0_1px_rgba(126,144,187,0.08),0_0_38px_rgba(0,255,163,0.08),0_0_44px_rgba(116,82,255,0.08)]" />
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/12 to-transparent" />
 
         <div className="relative flex items-center justify-between border-b border-[rgba(140,156,194,0.14)] bg-[rgba(27,36,53,0.78)] px-4 py-3 sm:px-6">
@@ -53,7 +53,7 @@ export function HeroTerminal() {
         </div>
 
         <div className="relative px-4 py-5 sm:px-6 sm:py-6 lg:px-8 lg:py-8">
-          <div className="rounded-[1.5rem] border border-[rgba(140,156,194,0.12)] bg-[rgba(255,255,255,0.02)] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)] sm:p-6">
+          <div className="rounded-[1.15rem] border border-[rgba(140,156,194,0.12)] bg-[rgba(255,255,255,0.02)] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)] sm:p-6">
             <div className="font-mono text-[0.9rem] leading-7 text-[var(--accent-soft)] sm:text-[0.96rem]">
               <div className="text-[var(--accent)]">➜ whoami</div>
               <div className="text-[#d7deec]">&quot;{person.name}&quot;</div>

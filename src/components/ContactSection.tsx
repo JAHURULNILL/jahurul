@@ -44,7 +44,7 @@ export function ContactSection() {
     >
       <div className="mx-auto max-w-7xl">
         <Reveal>
-          <div className="relative overflow-hidden rounded-[2.35rem] border border-white/10 bg-[linear-gradient(180deg,rgba(10,16,28,0.8),rgba(8,12,20,0.92))] p-6 shadow-[0_28px_80px_rgba(0,0,0,0.34)] sm:p-8 lg:p-10">
+          <div className="relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-[linear-gradient(180deg,rgba(10,16,28,0.8),rgba(8,12,20,0.92))] p-6 shadow-[0_28px_80px_rgba(0,0,0,0.34)] sm:p-8 lg:p-10">
             <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
             <div className="mx-auto max-w-4xl text-center">
               <p className="font-mono text-[0.72rem] uppercase tracking-[0.34em] text-[var(--accent-soft)]">
@@ -69,7 +69,7 @@ export function ContactSection() {
                     whileHover={{ y: -5 }}
                     whileTap={{ scale: 0.985 }}
                     className={[
-                      "group relative flex min-h-[124px] items-center justify-between gap-4 overflow-hidden rounded-[1.45rem] border px-5 py-5 shadow-[0_18px_46px_rgba(0,0,0,0.18)] transition duration-300",
+                      "group relative flex min-h-[124px] items-center justify-between gap-4 overflow-hidden rounded-[1rem] border px-5 py-5 shadow-[0_18px_46px_rgba(0,0,0,0.18)] transition duration-300",
                       link.label === "Email"
                         ? "border-[var(--accent)]/24 bg-[linear-gradient(135deg,rgba(26,198,97,0.98),rgba(41,218,121,0.92))] text-white shadow-[0_20px_44px_rgba(37,207,99,0.24)] hover:shadow-[0_26px_54px_rgba(37,207,99,0.3)]"
                         : "border-[rgba(106,126,170,0.2)] bg-[linear-gradient(180deg,rgba(29,39,57,0.96),rgba(27,35,51,0.96))] text-white hover:border-[var(--accent)]/16 hover:shadow-[0_24px_58px_rgba(0,0,0,0.24)]",

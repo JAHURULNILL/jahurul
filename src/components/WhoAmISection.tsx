@@ -17,7 +17,7 @@ export function WhoAmISection() {
           <Reveal delay={0.08}>
             <motion.div
               whileHover={{ y: -8 }}
-              className="group relative overflow-hidden rounded-[2rem] border border-[rgba(106,126,170,0.22)] bg-[linear-gradient(180deg,#1d2739_0%,#212d41_100%)] p-5 shadow-[0_26px_70px_rgba(0,0,0,0.28)] sm:p-6"
+              className="group relative overflow-hidden rounded-[1.55rem] border border-[rgba(106,126,170,0.22)] bg-[linear-gradient(180deg,#1d2739_0%,#212d41_100%)] p-5 shadow-[0_26px_70px_rgba(0,0,0,0.28)] sm:p-6"
             >
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,255,163,0.09),transparent_26%),radial-gradient(circle_at_bottom_right,rgba(120,146,255,0.1),transparent_32%)] opacity-80 transition duration-500 group-hover:opacity-100" />
               <div className="relative mb-5 flex items-center gap-2.5 border-b border-[rgba(140,156,194,0.14)] pb-4">
@@ -26,12 +26,12 @@ export function WhoAmISection() {
               </div>
 
               <div className="relative flex flex-col gap-6 lg:flex-row lg:items-center">
-                <div className="relative overflow-hidden rounded-[1.45rem] border border-[rgba(140,156,194,0.16)] bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02))] p-2.5 shadow-[0_18px_40px_rgba(0,0,0,0.18)]">
+                <div className="relative overflow-hidden rounded-[1.05rem] border border-[rgba(140,156,194,0.16)] bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02))] p-2.5 shadow-[0_18px_40px_rgba(0,0,0,0.18)]">
                   <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_42%)]" />
                   <img
                     src={person.photo}
                     alt={person.name}
-                    className="relative h-36 w-28 rounded-[1.1rem] object-cover transition duration-500 group-hover:scale-[1.03] sm:h-40 sm:w-32"
+                    className="relative h-36 w-28 rounded-[0.85rem] object-cover transition duration-500 group-hover:scale-[1.03] sm:h-40 sm:w-32"
                   />
                 </div>
 
@@ -64,7 +64,7 @@ export function WhoAmISection() {
               <Reveal key={title} delay={0.14 + index * 0.06}>
                 <motion.div
                   whileHover={{ y: -6 }}
-                  className="group relative overflow-hidden rounded-[1.7rem] border border-[rgba(106,126,170,0.22)] bg-[linear-gradient(180deg,#1d2739_0%,#212d41_100%)] p-5 shadow-[0_20px_50px_rgba(0,0,0,0.24)] transition duration-300 hover:border-[var(--accent)]/22"
+                  className="group relative overflow-hidden rounded-[1.2rem] border border-[rgba(106,126,170,0.22)] bg-[linear-gradient(180deg,#1d2739_0%,#212d41_100%)] p-5 shadow-[0_20px_50px_rgba(0,0,0,0.24)] transition duration-300 hover:border-[var(--accent)]/22"
                 >
                   <div className="absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100">
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,255,163,0.08),transparent_28%)]" />
