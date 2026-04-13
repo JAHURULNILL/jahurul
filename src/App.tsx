@@ -16,6 +16,7 @@ const observedSectionIds = ["about", "skills", "projects", "contact"];
 export default function App() {
   const [activeSection, setActiveSection] = useState("about");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     document.title = "Zahurul Haque Nill | Premium Developer Portfolio";
@@ -55,6 +56,19 @@ export default function App() {
     };
   }, [mobileMenuOpen]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 24);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen overflow-x-clip bg-[var(--bg)] text-[var(--text)]">
       <div className="pointer-events-none fixed inset-0 opacity-100">
@@ -69,6 +83,7 @@ export default function App() {
         links={navLinks}
         activeSection={activeSection}
         mobileMenuOpen={mobileMenuOpen}
+        isScrolled={isScrolled}
         onMobileMenuToggle={() => setMobileMenuOpen((value) => !value)}
         onNavigate={() => setMobileMenuOpen(false)}
       />
@@ -89,19 +104,13 @@ export default function App() {
               exit={{ y: -12, opacity: 0, scale: 0.98 }}
               transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
             >
-              <div className="mb-4 flex items-center justify-between rounded-2xl border border-white/8 bg-white/5 px-4 py-3">
-                <div>
-                  <p className="font-mono text-[0.72rem] uppercase tracking-[0.34em] text-[var(--muted)]">
-                    Navigation
-                  </p>
-                  <p className="mt-1 text-sm text-white/88">{person.role}</p>
-                </div>
+              <div className="mb-3 flex justify-end">
                 <button
                   type="button"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="rounded-full border border-white/12 bg-white/5 px-3 py-2 text-sm text-white/80 transition hover:border-[var(--accent)]/40 hover:text-white"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/12 bg-white/5 text-base text-white/80 transition hover:border-[var(--accent)]/40 hover:text-white"
                 >
-                  Close
+                  ×
                 </button>
               </div>
 

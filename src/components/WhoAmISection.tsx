@@ -14,6 +14,9 @@ export function WhoAmISection() {
     <section id="about" className="scroll-mt-28 px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-6">
+          <Reveal>
+            <p className="font-mono text-[0.74rem] uppercase tracking-[0.34em] text-[#9ef8d5]">who.am.i?</p>
+          </Reveal>
           <Reveal delay={0.08}>
             <motion.div
               whileHover={{ y: -8 }}

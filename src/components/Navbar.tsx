@@ -10,6 +10,7 @@ type NavbarProps = {
   links: NavLink[];
   activeSection: string;
   mobileMenuOpen: boolean;
+  isScrolled: boolean;
   onMobileMenuToggle: () => void;
   onNavigate: () => void;
 };
@@ -18,12 +19,20 @@ export function Navbar({
   links,
   activeSection,
   mobileMenuOpen,
+  isScrolled,
   onMobileMenuToggle,
   onNavigate,
 }: NavbarProps) {
   return (
     <header className="fixed inset-x-0 top-0 z-50">
-      <div className="border-b border-white/8 bg-[rgba(9,15,28,0.94)] shadow-[0_18px_40px_rgba(0,0,0,0.2)] backdrop-blur-2xl">
+      <div
+        className={[
+          "border-b backdrop-blur-2xl transition duration-300",
+          isScrolled
+            ? "border-white/6 bg-[rgba(9,15,28,0.72)] shadow-[0_14px_30px_rgba(0,0,0,0.14)]"
+            : "border-white/8 bg-[rgba(9,15,28,0.94)] shadow-[0_18px_40px_rgba(0,0,0,0.2)]",
+        ].join(" ")}
+      >
         <div className="mx-auto flex max-w-[1400px] items-center justify-between px-4 py-5 sm:px-6 lg:px-8">
           <a
             href="#home"
