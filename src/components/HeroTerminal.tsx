@@ -7,9 +7,9 @@ import { Reveal } from "./Reveal";
 export function HeroTerminal() {
   const [tilt, setTilt] = useState({ rotateX: 0, rotateY: 0 });
   const typedBlock = useRotatingTypewriter(heroTerminalBlocks, {
-    typingSpeed: 18,
-    deletingSpeed: 10,
-    pauseDuration: 2200,
+    typingSpeed: 24,
+    deletingSpeed: 13,
+    pauseDuration: 2600,
   });
 
   return (

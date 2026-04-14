@@ -5,9 +5,9 @@ import { Reveal } from "./Reveal";
 
 export function WhoAmISection() {
   const typedIntro = useRotatingTypewriter(profileIntroBlocks, {
-    typingSpeed: 20,
-    deletingSpeed: 10,
-    pauseDuration: 2200,
+    typingSpeed: 24,
+    deletingSpeed: 13,
+    pauseDuration: 2600,
   });
 
   return (
@@ -20,7 +20,7 @@ export function WhoAmISection() {
           <Reveal delay={0.08}>
             <motion.div
               whileHover={{ y: -6 }}
-              className="group relative overflow-hidden rounded-[1.55rem] border border-[rgba(106,126,170,0.22)] bg-[linear-gradient(180deg,#1c2739_0%,#202b3e_100%)] p-5 shadow-[0_22px_52px_rgba(0,0,0,0.26)] sm:p-6 hover:shadow-[0_30px_68px_rgba(0,0,0,0.34)]"
+              className="group relative overflow-hidden rounded-[1.55rem] border border-[rgba(106,126,170,0.22)] bg-[linear-gradient(180deg,#1c2739_0%,#202b3e_100%)] p-5 shadow-[0_22px_52px_rgba(0,0,0,0.26)] transition-[background-color,border-color,box-shadow,transform] duration-500 active:border-[var(--accent)]/18 active:bg-[linear-gradient(180deg,#213049_0%,#253349_100%)] sm:p-6 hover:shadow-[0_30px_68px_rgba(0,0,0,0.34)]"
             >
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,255,163,0.08),transparent_26%),radial-gradient(circle_at_bottom_right,rgba(120,146,255,0.08),transparent_32%)] opacity-80 transition duration-500 group-hover:opacity-100" />
               <div className="absolute inset-0 rounded-[1.55rem] shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]" />
@@ -66,7 +66,7 @@ export function WhoAmISection() {
               <Reveal key={title} delay={0.14 + index * 0.06}>
                 <motion.div
                   whileHover={{ y: -6 }}
-                  className="group relative overflow-hidden rounded-[1.2rem] border border-[rgba(106,126,170,0.22)] bg-[linear-gradient(180deg,#1b2536_0%,#212d41_100%)] p-5 shadow-[0_16px_34px_rgba(0,0,0,0.2)] transition duration-300 hover:border-[var(--accent)]/22 hover:shadow-[0_24px_48px_rgba(0,0,0,0.3)]"
+                  className="group relative overflow-hidden rounded-[1.2rem] border border-[rgba(106,126,170,0.22)] bg-[linear-gradient(180deg,#1b2536_0%,#212d41_100%)] p-5 shadow-[0_16px_34px_rgba(0,0,0,0.2)] transition-[background-color,border-color,box-shadow,transform] duration-500 active:border-[var(--accent)]/18 active:bg-[linear-gradient(180deg,#223047_0%,#26354d_100%)] hover:border-[var(--accent)]/22 hover:shadow-[0_24px_48px_rgba(0,0,0,0.3)]"
                 >
                   <div className="absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100">
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,255,163,0.08),transparent_28%)]" />

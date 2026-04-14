@@ -105,3 +105,13 @@ textarea {
     background-size: 54px 54px;
   }
 }
+
+@media (hover: hover) and (pointer: fine) {
+  body,
+  a,
+  button,
+  textarea,
+  input {
+    cursor: none;
+  }
+}

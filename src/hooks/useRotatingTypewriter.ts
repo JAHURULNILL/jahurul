@@ -9,9 +9,9 @@ type TypewriterOptions = {
 
 export function useRotatingTypewriter(blocks: string[], options?: TypewriterOptions) {
   const shouldReduceMotion = useReducedMotion();
-  const typingSpeed = options?.typingSpeed ?? 24;
-  const deletingSpeed = options?.deletingSpeed ?? 14;
-  const pauseDuration = options?.pauseDuration ?? 1800;
+  const typingSpeed = options?.typingSpeed ?? 28;
+  const deletingSpeed = options?.deletingSpeed ?? 16;
+  const pauseDuration = options?.pauseDuration ?? 2400;
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [displayText, setDisplayText] = useState(shouldReduceMotion ? blocks[0] ?? "" : "");

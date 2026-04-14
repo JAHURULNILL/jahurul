@@ -68,10 +68,10 @@ export function ContactSection() {
                     whileHover={{ y: -4 }}
                     whileTap={{ scale: 0.985 }}
                     className={[
-                      "group relative flex min-h-[104px] items-center justify-between gap-3 overflow-hidden rounded-[0.9rem] border px-4 py-4 shadow-[0_18px_46px_rgba(0,0,0,0.18)] transition duration-300",
+                      "group relative flex min-h-[104px] items-center justify-between gap-3 overflow-hidden rounded-[0.9rem] border px-4 py-4 shadow-[0_18px_46px_rgba(0,0,0,0.18)] transition-[background-color,border-color,box-shadow,transform] duration-500",
                       link.label === "Email"
-                        ? "border-[var(--accent)]/24 bg-[linear-gradient(135deg,rgba(26,198,97,0.96),rgba(41,218,121,0.9))] text-white shadow-[0_20px_44px_rgba(37,207,99,0.2)] hover:shadow-[0_26px_54px_rgba(37,207,99,0.28)]"
-                        : "border-[rgba(106,126,170,0.2)] bg-[linear-gradient(180deg,rgba(29,39,57,0.9),rgba(27,35,51,0.94))] text-white hover:border-[var(--accent)]/16 hover:shadow-[0_24px_58px_rgba(0,0,0,0.24)]",
+                        ? "border-[var(--accent)]/24 bg-[linear-gradient(135deg,rgba(26,198,97,0.96),rgba(41,218,121,0.9))] text-white shadow-[0_20px_44px_rgba(37,207,99,0.2)] active:bg-[linear-gradient(135deg,rgba(34,214,112,0.98),rgba(59,227,138,0.94))] hover:shadow-[0_26px_54px_rgba(37,207,99,0.28)]"
+                        : "border-[rgba(106,126,170,0.2)] bg-[linear-gradient(180deg,rgba(29,39,57,0.9),rgba(27,35,51,0.94))] text-white active:border-[var(--accent)]/16 active:bg-[linear-gradient(180deg,rgba(33,45,65,0.94),rgba(29,39,57,0.98))] hover:border-[var(--accent)]/16 hover:shadow-[0_24px_58px_rgba(0,0,0,0.24)]",
                     ].join(" ")}
                   >
                     <span className="absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100">

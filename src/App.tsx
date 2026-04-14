@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ContactSection } from "./components/ContactSection";
+import { CursorFollower } from "./components/CursorFollower";
 import { Footer } from "./components/Footer";
 import { HeroHeading } from "./components/HeroHeading";
 import { HeroTerminal } from "./components/HeroTerminal";
@@ -151,6 +152,7 @@ export default function App() {
       </main>
 
       <Footer />
+      <CursorFollower />
       <QuickContactPopup />
     </div>
   );

@@ -20,7 +20,7 @@ export function ProjectsSection() {
             <Reveal key={project.title} delay={index * 0.08}>
               <motion.article
                 whileHover={{ y: -7 }}
-                className="group relative overflow-hidden rounded-[1.05rem] border border-[rgba(115,132,172,0.18)] bg-[linear-gradient(180deg,rgba(13,19,31,0.98),rgba(11,16,27,0.96))] p-5 shadow-[0_18px_44px_rgba(0,0,0,0.24)] transition duration-300 hover:border-white/18 hover:shadow-[0_28px_60px_rgba(0,0,0,0.34)]"
+                className="group relative overflow-hidden rounded-[1.05rem] border border-[rgba(115,132,172,0.18)] bg-[linear-gradient(180deg,rgba(13,19,31,0.98),rgba(11,16,27,0.96))] p-5 shadow-[0_18px_44px_rgba(0,0,0,0.24)] transition-[background-color,border-color,box-shadow,transform] duration-500 active:border-white/16 active:bg-[linear-gradient(180deg,rgba(17,24,38,0.98),rgba(14,20,32,0.96))] hover:border-white/18 hover:shadow-[0_28px_60px_rgba(0,0,0,0.34)]"
               >
                 <div className={`absolute inset-x-0 top-0 h-24 bg-gradient-to-br ${project.accent} opacity-90`} />
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.04),transparent_26%)] opacity-0 transition duration-500 group-hover:opacity-100" />
