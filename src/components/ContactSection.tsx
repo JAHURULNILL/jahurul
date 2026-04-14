@@ -44,11 +44,11 @@ export function ContactSection() {
     >
       <div className="mx-auto max-w-7xl">
         <Reveal>
-          <div className="premium-panel premium-ring relative overflow-hidden rounded-[1.38rem] border border-white/10 p-6 sm:p-8 lg:p-10">
-            <div className="absolute -left-16 top-12 h-44 w-44 rounded-full bg-[radial-gradient(circle,_rgba(0,255,163,0.08),_transparent_70%)] blur-3xl" />
-            <div className="absolute -right-12 bottom-2 h-44 w-44 rounded-full bg-[radial-gradient(circle,_rgba(101,163,255,0.08),_transparent_70%)] blur-3xl" />
-            <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-            <div className="mx-auto max-w-4xl text-center">
+          <div className="relative overflow-hidden py-2">
+            <div className="absolute left-[8%] top-4 h-40 w-40 rounded-full bg-[radial-gradient(circle,_rgba(0,255,163,0.08),_transparent_70%)] blur-3xl" />
+            <div className="absolute right-[6%] top-10 h-44 w-44 rounded-full bg-[radial-gradient(circle,_rgba(101,163,255,0.08),_transparent_70%)] blur-3xl" />
+
+            <div className="relative mx-auto max-w-4xl text-center">
               <h2 className="text-4xl font-bold tracking-[-0.065em] text-white sm:text-5xl lg:text-[4.9rem]">
                 Let&apos;s Talk
               </h2>
