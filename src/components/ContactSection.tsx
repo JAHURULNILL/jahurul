@@ -45,6 +45,7 @@ export function ContactSection() {
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <div className="relative overflow-hidden py-2">
+            <div className="mx-auto mb-10 h-px w-full max-w-6xl bg-gradient-to-r from-transparent via-white/12 to-transparent" />
             <div className="absolute left-[8%] top-4 h-40 w-40 rounded-full bg-[radial-gradient(circle,_rgba(0,255,163,0.08),_transparent_70%)] blur-3xl" />
             <div className="absolute right-[6%] top-10 h-44 w-44 rounded-full bg-[radial-gradient(circle,_rgba(101,163,255,0.08),_transparent_70%)] blur-3xl" />
 
