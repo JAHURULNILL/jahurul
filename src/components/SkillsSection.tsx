@@ -20,7 +20,7 @@ export function SkillsSection() {
             <Reveal key={skill.title} delay={index * 0.06}>
               <motion.article
                 whileHover={{ y: -6 }}
-                className="group relative h-full overflow-hidden rounded-[1.05rem] border border-[rgba(106,126,170,0.22)] bg-[linear-gradient(180deg,#1c2739_0%,#212d41_100%)] p-4 sm:p-5 shadow-[0_22px_60px_rgba(0,0,0,0.24)] transition duration-300 hover:border-[var(--accent)]/24 hover:shadow-[0_30px_70px_rgba(0,0,0,0.34)]"
+                className="group relative h-full overflow-hidden rounded-[1.05rem] border border-[rgba(106,126,170,0.22)] bg-[linear-gradient(180deg,#1c2739_0%,#212d41_100%)] p-4 sm:p-5 shadow-[0_18px_38px_rgba(0,0,0,0.24)] transition duration-300 hover:border-[var(--accent)]/24 hover:shadow-[0_26px_54px_rgba(0,0,0,0.32)]"
               >
                 <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
                 <div className="absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100">
@@ -31,21 +31,24 @@ export function SkillsSection() {
                     {skill.title}
                   </h3>
 
-                  <div className="mt-6 flex flex-1 flex-col gap-4">
+                  <div className="mt-6 flex flex-1 flex-col gap-3.5">
                     {skill.items.map((item) => (
-                      <div key={item.label} className="flex items-center justify-between gap-4">
-                        <p className="text-[0.95rem] font-medium tracking-[-0.02em] text-[#d0d8e6] sm:text-[1rem]">
+                      <div
+                        key={item.label}
+                        className="flex items-center justify-between gap-3 rounded-[0.8rem] border border-white/6 bg-white/[0.025] px-3 py-2.5"
+                      >
+                        <p className="text-[0.92rem] font-medium tracking-[-0.02em] text-[#d0d8e6] sm:text-[0.96rem]">
                           {item.label}
                         </p>
-                        <span
-                          className={`h-[5px] rounded-full bg-[var(--accent)] shadow-[0_0_16px_rgba(0,255,163,0.18)] ${item.width}`}
-                        />
+                        <span className="rounded-full border border-[var(--accent)]/16 bg-[rgba(0,255,163,0.08)] px-2.5 py-1 font-mono text-[0.7rem] tracking-[0.08em] text-[var(--accent-soft)]">
+                          {item.level}
+                        </span>
                       </div>
                     ))}
                   </div>
 
-                  <div className="pointer-events-none absolute bottom-4 left-4 h-12 w-12 rounded-full border border-[rgba(0,255,163,0.38)] opacity-0 transition duration-500 group-hover:opacity-100">
-                    <span className="absolute left-1/2 top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[var(--accent)] shadow-[0_0_18px_rgba(0,255,163,0.36)]" />
+                  <div className="pointer-events-none absolute bottom-4 left-4 h-12 w-12 rounded-full border border-[rgba(0,255,163,0.3)] opacity-0 transition duration-500 group-hover:opacity-100">
+                    <span className="absolute left-1/2 top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[var(--accent)] shadow-[0_0_18px_rgba(0,255,163,0.3)]" />
                   </div>
                 </div>
               </motion.article>

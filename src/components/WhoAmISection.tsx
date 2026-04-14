@@ -20,7 +20,7 @@ export function WhoAmISection() {
           <Reveal delay={0.08}>
             <motion.div
               whileHover={{ y: -6 }}
-              className="group relative overflow-hidden rounded-[1.55rem] border border-[rgba(106,126,170,0.22)] bg-[linear-gradient(180deg,#1c2739_0%,#202b3e_100%)] p-5 shadow-[0_26px_70px_rgba(0,0,0,0.28)] sm:p-6"
+              className="group relative overflow-hidden rounded-[1.55rem] border border-[rgba(106,126,170,0.22)] bg-[linear-gradient(180deg,#1c2739_0%,#202b3e_100%)] p-5 shadow-[0_22px_52px_rgba(0,0,0,0.26)] sm:p-6 hover:shadow-[0_30px_68px_rgba(0,0,0,0.34)]"
             >
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,255,163,0.08),transparent_26%),radial-gradient(circle_at_bottom_right,rgba(120,146,255,0.08),transparent_32%)] opacity-80 transition duration-500 group-hover:opacity-100" />
               <div className="absolute inset-0 rounded-[1.55rem] shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]" />
@@ -30,7 +30,7 @@ export function WhoAmISection() {
               </div>
 
               <div className="relative flex flex-col gap-6 lg:flex-row lg:items-center">
-                <div className="relative overflow-hidden rounded-[1.05rem] border border-[rgba(140,156,194,0.16)] bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02))] p-2.5 shadow-[0_18px_40px_rgba(0,0,0,0.18)]">
+                <div className="relative overflow-hidden rounded-[1.05rem] border border-[rgba(140,156,194,0.16)] bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02))] p-2.5 shadow-[0_16px_36px_rgba(0,0,0,0.18)]">
                   <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_42%)]" />
                   <img
                     src={person.photo}
@@ -66,7 +66,7 @@ export function WhoAmISection() {
               <Reveal key={title} delay={0.14 + index * 0.06}>
                 <motion.div
                   whileHover={{ y: -6 }}
-                  className="group relative overflow-hidden rounded-[1.2rem] border border-[rgba(106,126,170,0.22)] bg-[linear-gradient(180deg,#1b2536_0%,#212d41_100%)] p-5 shadow-[0_20px_50px_rgba(0,0,0,0.24)] transition duration-300 hover:border-[var(--accent)]/22"
+                  className="group relative overflow-hidden rounded-[1.2rem] border border-[rgba(106,126,170,0.22)] bg-[linear-gradient(180deg,#1b2536_0%,#212d41_100%)] p-5 shadow-[0_16px_34px_rgba(0,0,0,0.2)] transition duration-300 hover:border-[var(--accent)]/22 hover:shadow-[0_24px_48px_rgba(0,0,0,0.3)]"
                 >
                   <div className="absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100">
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,255,163,0.08),transparent_28%)]" />

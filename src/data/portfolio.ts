@@ -77,46 +77,46 @@ export const skills = [
   {
     title: "Prompt Engineering",
     items: [
-      { label: "Structured prompting", width: "w-24 sm:w-28" },
-      { label: "Output logic", width: "w-18 sm:w-20" },
-      { label: "Prompt optimization", width: "w-20 sm:w-24" },
-      { label: "AI instruction design", width: "w-16 sm:w-18" },
+      { label: "Structured prompting", level: "92%" },
+      { label: "Output logic", level: "84%" },
+      { label: "Prompt optimization", level: "88%" },
+      { label: "AI instruction design", level: "81%" },
     ],
   },
   {
     title: "AI Tools",
     items: [
-      { label: "Workflow exploration", width: "w-22 sm:w-26" },
-      { label: "Tool chaining", width: "w-17 sm:w-20" },
-      { label: "Creative automation", width: "w-19 sm:w-22" },
-      { label: "AI-assisted research", width: "w-14 sm:w-16" },
+      { label: "Workflow exploration", level: "89%" },
+      { label: "Tool chaining", level: "82%" },
+      { label: "Creative automation", level: "85%" },
+      { label: "AI-assisted research", level: "78%" },
     ],
   },
   {
     title: "Digital Marketing",
     items: [
-      { label: "Content direction", width: "w-21 sm:w-24" },
-      { label: "Campaign thinking", width: "w-18 sm:w-21" },
-      { label: "Audience clarity", width: "w-15 sm:w-18" },
-      { label: "Digital positioning", width: "w-20 sm:w-23" },
+      { label: "Content direction", level: "87%" },
+      { label: "Campaign thinking", level: "83%" },
+      { label: "Audience clarity", level: "79%" },
+      { label: "Digital positioning", level: "86%" },
     ],
   },
   {
     title: "Frontend Development",
     items: [
-      { label: "React & TypeScript", width: "w-23 sm:w-27" },
-      { label: "Tailwind CSS", width: "w-20 sm:w-24" },
-      { label: "Responsive UI", width: "w-16 sm:w-19" },
-      { label: "Interaction polish", width: "w-18 sm:w-22" },
+      { label: "React & TypeScript", level: "80%" },
+      { label: "Tailwind CSS", level: "84%" },
+      { label: "Responsive UI", level: "78%" },
+      { label: "Interaction polish", level: "76%" },
     ],
   },
   {
     title: "Problem Solving",
     items: [
-      { label: "Clear breakdowns", width: "w-19 sm:w-22" },
-      { label: "Practical solutions", width: "w-23 sm:w-26" },
-      { label: "Creative thinking", width: "w-17 sm:w-20" },
-      { label: "Continuous learning", width: "w-21 sm:w-24" },
+      { label: "Clear breakdowns", level: "88%" },
+      { label: "Practical solutions", level: "90%" },
+      { label: "Creative thinking", level: "82%" },
+      { label: "Continuous learning", level: "91%" },
     ],
   },
 ];
@@ -124,30 +124,27 @@ export const skills = [
 export const projects = [
   {
     title: "Prompt Workspace",
-    eyebrow: "AI System Concept",
-    summary:
-      "A premium concept for organizing reusable prompts, response structures, and cleaner AI workflows inside a calm, developer-inspired interface.",
-    tags: ["Prompt Design", "Workflow", "UI System"],
+    eyebrow: "AI Concept",
+    summary: "A clean prompt hub for saving, organizing, and reusing smarter AI workflows.",
+    tags: ["Prompt Design", "Workflow"],
     accent: "from-[rgba(0,255,163,0.18)] to-transparent",
-    meta: "Reusable prompt architecture",
+    meta: "Premium system idea",
   },
   {
     title: "Digital Growth Landing",
-    eyebrow: "Marketing Experience",
-    summary:
-      "A polished landing page direction focused on trust, visual hierarchy, and stronger digital presentation for premium services and modern brands.",
-    tags: ["Landing Page", "UX", "Brand Feel"],
+    eyebrow: "Brand Page",
+    summary: "A polished landing experience focused on clarity, trust, and premium presentation.",
+    tags: ["Landing Page", "UX"],
     accent: "from-[rgba(101,163,255,0.18)] to-transparent",
-    meta: "Clearer conversion storytelling",
+    meta: "Conversion-first design",
   },
   {
     title: "Creative Frontend Lab",
-    eyebrow: "Practice & Exploration",
-    summary:
-      "An ongoing frontend lab where dark UI systems, responsive layout discipline, and refined motion ideas are explored and improved across devices.",
-    tags: ["React", "Responsive", "Motion"],
+    eyebrow: "UI Practice",
+    summary: "A dark UI playground for testing layout, motion, and responsive design ideas.",
+    tags: ["React", "Motion"],
     accent: "from-[rgba(192,168,255,0.16)] to-transparent",
-    meta: "Refined visual experimentation",
+    meta: "Refined visual experiments",
   },
 ];
 
