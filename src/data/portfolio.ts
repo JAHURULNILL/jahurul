@@ -20,16 +20,14 @@ export const navLinks = [
 
 export const heroTerminalBlocks = [
   [
-    "➜ cat profile.json",
+    "> cat profile.json",
     "{",
     '  "role": "Student | Prompt Engineer | Digital Marketer",',
-    '  "focus": "Frontend learning, AI tools, creative work",',
-    '  "status": "Building smart digital experiences",',
-    '  "location": "Bangladesh"',
+    '  "focus": "Frontend learning, AI tools, creative work"',
     "}",
   ].join("\n"),
   [
-    "➜ cat skills.ts",
+    "> cat skills.ts",
     "const skills = [",
     '  "Prompt Engineering",',
     '  "AI Tools",',
@@ -38,7 +36,7 @@ export const heroTerminalBlocks = [
     "]",
   ].join("\n"),
   [
-    "➜ cat mission.md",
+    "> cat mission.md",
     "Building modern, premium, and useful digital experiences",
     "with creativity, learning, and smart problem solving.",
   ].join("\n"),
@@ -70,7 +68,7 @@ export const whoAmIBlocks = [
 ].map((block) => `> cat ${block}`);
 
 export const profileIntroBlocks = [
-  "I’m building my path through AI tools, creative digital work, and modern frontend learning with a focus on polished experiences.",
+  "I'm building my path through AI tools, creative digital work, and modern frontend learning with a focus on polished experiences.",
   "I enjoy blending prompt thinking, design awareness, and digital strategy into work that feels clean, useful, and modern.",
   "My goal is to keep learning, keep improving, and create premium digital experiences with thoughtful execution.",
 ];
