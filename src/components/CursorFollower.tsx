@@ -5,8 +5,8 @@ export function CursorFollower() {
   const [enabled, setEnabled] = useState(false);
   const [visible, setVisible] = useState(false);
 
-  const x = useSpring(-100, { stiffness: 180, damping: 22, mass: 0.4 });
-  const y = useSpring(-100, { stiffness: 180, damping: 22, mass: 0.4 });
+  const x = useSpring(-100, { stiffness: 155, damping: 20, mass: 0.42 });
+  const y = useSpring(-100, { stiffness: 155, damping: 20, mass: 0.42 });
 
   useEffect(() => {
     const media = window.matchMedia("(hover: hover) and (pointer: fine)");
@@ -28,8 +28,8 @@ export function CursorFollower() {
     }
 
     const handleMove = (event: MouseEvent) => {
-      x.set(event.clientX - 12);
-      y.set(event.clientY - 12);
+      x.set(event.clientX + 10);
+      y.set(event.clientY + 12);
       setVisible(true);
     };
 
@@ -54,14 +54,25 @@ export function CursorFollower() {
   return (
     <motion.div
       aria-hidden="true"
-      className="pointer-events-none fixed left-0 top-0 z-[80] hidden h-6 w-6 rounded-full border border-[rgba(158,248,213,0.5)] bg-[radial-gradient(circle,rgba(158,248,213,0.18),rgba(158,248,213,0.04))] shadow-[0_0_18px_rgba(0,255,163,0.14)] md:block"
+      className="pointer-events-none fixed left-0 top-0 z-[80] hidden md:block"
       style={{
         x,
         y,
         opacity: visible ? 1 : 0,
       }}
     >
-      <span className="absolute left-1/2 top-1/2 h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[var(--accent)]" />
+      <div className="relative h-7 w-7 drop-shadow-[0_0_14px_rgba(0,255,163,0.16)]">
+        <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none" aria-hidden="true">
+          <path
+            d="M5 3.8v15.6l4.15-4.35 3.6 4.95 2.35-1.7-3.55-4.85H18L5 3.8Z"
+            fill="rgba(8,18,30,0.92)"
+            stroke="rgba(158,248,213,0.7)"
+            strokeWidth="1.1"
+            strokeLinejoin="round"
+          />
+        </svg>
+        <span className="absolute left-[6px] top-[6px] h-1.5 w-1.5 rounded-full bg-[var(--accent)] opacity-85" />
+      </div>
     </motion.div>
   );
 }
