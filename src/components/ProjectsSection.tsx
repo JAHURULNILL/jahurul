@@ -5,7 +5,7 @@ import { SectionHeading } from "./SectionHeading";
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="scroll-mt-28 px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+    <section id="projects" className="scroll-mt-28 px-4 py-18 sm:px-6 lg:px-8 lg:py-28">
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <SectionHeading
@@ -15,16 +15,15 @@ export function ProjectsSection() {
           />
         </Reveal>
 
-        <div className="mt-10 grid gap-5 lg:grid-cols-3">
+        <div className="mt-12 grid gap-5 lg:grid-cols-3">
           {projects.map((project, index) => (
             <Reveal key={project.title} delay={index * 0.08}>
               <motion.article
                 whileHover={{ y: -7 }}
-                className="group relative overflow-hidden rounded-[1.05rem] border border-[rgba(115,132,172,0.18)] bg-[linear-gradient(180deg,rgba(13,19,31,0.98),rgba(11,16,27,0.96))] p-5 shadow-[0_18px_44px_rgba(0,0,0,0.24)] transition-[background-color,border-color,box-shadow,transform] duration-500 active:border-white/16 active:bg-[linear-gradient(180deg,rgba(17,24,38,0.98),rgba(14,20,32,0.96))] hover:border-white/18 hover:shadow-[0_28px_60px_rgba(0,0,0,0.34)]"
+                className="premium-panel premium-ring group relative overflow-hidden rounded-[1.08rem] border border-[rgba(115,132,172,0.18)] p-5 transition-[background-color,border-color,box-shadow,transform] duration-500 active:border-white/16 active:bg-[linear-gradient(180deg,rgba(17,24,38,0.98),rgba(14,20,32,0.96))] hover:border-[rgba(178,192,220,0.22)] hover:shadow-[0_30px_66px_rgba(0,0,0,0.36)]"
               >
                 <div className={`absolute inset-x-0 top-0 h-24 bg-gradient-to-br ${project.accent} opacity-90`} />
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.04),transparent_26%)] opacity-0 transition duration-500 group-hover:opacity-100" />
-                <div className="absolute inset-0 rounded-[1.05rem] shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.05),transparent_24%),radial-gradient(circle_at_bottom_left,rgba(0,255,163,0.04),transparent_26%)] opacity-0 transition duration-500 group-hover:opacity-100" />
 
                 <div className="relative flex h-full flex-col">
                   <div className="flex items-center justify-between gap-3">
@@ -34,17 +33,17 @@ export function ProjectsSection() {
                     <span className="font-mono text-[0.8rem] text-white/34">0{index + 1}</span>
                   </div>
 
-                  <h3 className="mt-6 text-[1.35rem] font-bold tracking-[-0.05em] text-white sm:text-[1.5rem]">
+                  <h3 className="mt-6 text-[1.38rem] font-bold tracking-[-0.055em] text-white sm:text-[1.56rem]">
                     {project.title}
                   </h3>
 
-                  <p className="mt-3 text-[0.92rem] leading-7 text-[#aeb9cc]">{project.summary}</p>
+                  <p className="mt-3 text-[0.93rem] leading-7 text-[#b1bfd3]">{project.summary}</p>
 
                   <div className="mt-5 flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="rounded-full border border-white/10 bg-[rgba(255,255,255,0.03)] px-2.5 py-1.5 text-[0.74rem] text-white/76"
+                        className="rounded-full border border-white/10 bg-[rgba(255,255,255,0.03)] px-2.5 py-1.5 text-[0.74rem] text-white/78"
                       >
                         {tag}
                       </span>
