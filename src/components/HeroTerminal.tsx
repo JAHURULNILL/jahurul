@@ -4,6 +4,80 @@ import { heroTerminalBlocks, person } from "../data/portfolio";
 import { useRotatingTypewriter } from "../hooks/useRotatingTypewriter";
 import { Reveal } from "./Reveal";
 
+function renderTypedLine(line: string, index: number) {
+  const trimmed = line.trim();
+
+  if (!trimmed) {
+    return <div key={index} className="h-7" />;
+  }
+
+  if (trimmed.startsWith(">")) {
+    const parts = trimmed.split(/\s+/);
+    const command = parts[1] ?? "";
+    const target = parts.slice(2).join(" ");
+
+    return (
+      <div key={index}>
+        <span className="text-[#8ea0bf]">&gt; </span>
+        <span className="text-[#d9e4f7]">{command}</span>
+        {target ? <span className="text-[#8fd9ff]"> {target}</span> : null}
+      </div>
+    );
+  }
+
+  if (trimmed === "{" || trimmed === "}" || trimmed === "[" || trimmed === "]") {
+    return (
+      <div key={index} className="text-[#91a2c0]">
+        {line}
+      </div>
+    );
+  }
+
+  if (trimmed.startsWith("const ")) {
+    const match = line.match(/^(\s*)const\s+([a-zA-Z0-9_]+)\s*=\s*(.*)$/);
+
+    if (match) {
+      return (
+        <div key={index}>
+          <span className="text-transparent">{match[1]}</span>
+          <span className="text-[#c6b8ff]">const</span>
+          <span className="text-[#d7deec]"> </span>
+          <span className="text-[#93e8d1]">{match[2]}</span>
+          <span className="text-[#d7deec]"> = </span>
+          <span className="text-[#91a2c0]">{match[3]}</span>
+        </div>
+      );
+    }
+  }
+
+  const jsonMatch = line.match(/^(\s*)"([^"]+)"\s*:\s*(.*?)(,?)$/);
+  if (jsonMatch) {
+    return (
+      <div key={index}>
+        <span className="text-transparent">{jsonMatch[1]}</span>
+        <span className="text-[#8fd9ff]">"{jsonMatch[2]}"</span>
+        <span className="text-[#91a2c0]">: </span>
+        <span className="text-[#e5d4a8]">{jsonMatch[3]}</span>
+        <span className="text-[#91a2c0]">{jsonMatch[4]}</span>
+      </div>
+    );
+  }
+
+  if (trimmed.startsWith('"')) {
+    return (
+      <div key={index} className="text-[#9fe7d6]">
+        {line}
+      </div>
+    );
+  }
+
+  return (
+    <div key={index} className="text-[#c6d1e4]">
+      {line}
+    </div>
+  );
+}
+
 export function HeroTerminal() {
   const [tilt, setTilt] = useState({ rotateX: 0, rotateY: 0 });
   const typedBlock = useRotatingTypewriter(heroTerminalBlocks, {
@@ -61,12 +135,12 @@ export function HeroTerminal() {
             </div>
 
             <div className="mt-5 min-h-[12.25rem] sm:min-h-[13.75rem]">
-              <pre className="font-mono text-[0.74rem] leading-7 whitespace-pre-wrap break-words text-[#a8b6cb] sm:text-[0.8rem]">
-                {typedBlock}
+              <div className="font-mono text-[0.74rem] leading-7 break-words sm:text-[0.8rem]">
+                {typedBlock.split("\n").map((line, index) => renderTypedLine(line, index))}
                 <span className="terminal-cursor" aria-hidden="true">
                   |
                 </span>
-              </pre>
+              </div>
             </div>
           </div>
         </div>

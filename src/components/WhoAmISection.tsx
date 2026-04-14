@@ -20,22 +20,22 @@ export function WhoAmISection() {
           <Reveal delay={0.08}>
             <motion.div
               whileHover={{ y: -6 }}
-              className="group relative overflow-hidden rounded-[1.55rem] border border-[rgba(106,126,170,0.22)] bg-[linear-gradient(180deg,#1c2739_0%,#202b3e_100%)] p-5 shadow-[0_22px_52px_rgba(0,0,0,0.26)] transition-[background-color,border-color,box-shadow,transform] duration-500 active:border-[var(--accent)]/18 active:bg-[linear-gradient(180deg,#213049_0%,#253349_100%)] sm:p-6 hover:shadow-[0_30px_68px_rgba(0,0,0,0.34)]"
+              className="group relative overflow-hidden rounded-[1.12rem] border border-[rgba(106,126,170,0.22)] bg-[linear-gradient(180deg,#1c2739_0%,#202b3e_100%)] p-5 shadow-[0_22px_52px_rgba(0,0,0,0.26)] transition-[background-color,border-color,box-shadow,transform] duration-500 active:border-[var(--accent)]/18 active:bg-[linear-gradient(180deg,#213049_0%,#253349_100%)] sm:p-6 hover:shadow-[0_30px_68px_rgba(0,0,0,0.34)]"
             >
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,255,163,0.08),transparent_26%),radial-gradient(circle_at_bottom_right,rgba(120,146,255,0.08),transparent_32%)] opacity-80 transition duration-500 group-hover:opacity-100" />
-              <div className="absolute inset-0 rounded-[1.55rem] shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]" />
+              <div className="absolute inset-0 rounded-[1.12rem] shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]" />
               <div className="relative mb-5 flex items-center gap-2.5 border-b border-[rgba(140,156,194,0.14)] pb-4">
                 <span className="h-3 w-3 rounded-full bg-[#62708f]" />
                 <span className="h-3 w-3 rounded-full bg-[#62708f]" />
               </div>
 
               <div className="relative flex flex-col gap-6 lg:flex-row lg:items-center">
-                <div className="relative overflow-hidden rounded-[1.05rem] border border-[rgba(140,156,194,0.16)] bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02))] p-2.5 shadow-[0_16px_36px_rgba(0,0,0,0.18)]">
+                <div className="relative overflow-hidden rounded-[0.95rem] border border-[rgba(140,156,194,0.16)] bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02))] p-2.5 shadow-[0_10px_22px_rgba(0,0,0,0.12)]">
                   <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_42%)]" />
                   <img
                     src={person.photo}
                     alt={person.name}
-                    className="relative h-36 w-28 rounded-[0.85rem] object-cover transition duration-500 group-hover:scale-[1.03] sm:h-40 sm:w-32"
+                    className="relative h-36 w-28 rounded-[0.78rem] object-cover shadow-[0_18px_40px_rgba(0,0,0,0.3),0_0_18px_rgba(255,255,255,0.04)] transition duration-500 group-hover:scale-[1.03] sm:h-40 sm:w-32"
                   />
                 </div>
 
