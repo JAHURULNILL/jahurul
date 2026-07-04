@@ -36,7 +36,7 @@ export function Navbar({
         <div className="mx-auto flex max-w-[1400px] items-center justify-between px-4 py-5 sm:px-6 lg:px-8">
           <a href="#home" className="group inline-flex items-center transition duration-300">
             <span className="font-mono text-[1.95rem] font-semibold leading-none tracking-[-0.05em] text-white transition duration-300 group-hover:scale-[1.02] sm:text-[2.35rem]">
-              &lt;Zahurul/&gt;
+              &lt;Jahurul/&gt;
             </span>
           </a>
 

@@ -11,7 +11,7 @@ export function SkillsSection() {
           <SectionHeading
             eyebrow=""
             title="Skills"
-            description="The skills below reflect the blend of prompt thinking, AI curiosity, marketing perspective, and frontend learning that shapes my work."
+            description="Professional skills developed through 3 years of banking experience, academic studies in marketing, and continuous self-improvement in technology."
           />
         </Reveal>
 

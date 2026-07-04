@@ -2,17 +2,18 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ContactSection } from "./components/ContactSection";
 import { CursorFollower } from "./components/CursorFollower";
+import { EducationSection } from "./components/EducationSection";
+import { ExperienceSection } from "./components/ExperienceSection";
 import { Footer } from "./components/Footer";
 import { HeroHeading } from "./components/HeroHeading";
 import { HeroTerminal } from "./components/HeroTerminal";
 import { Navbar } from "./components/Navbar";
-import { ProjectsSection } from "./components/ProjectsSection";
 import { QuickContactPopup } from "./components/QuickContactPopup";
 import { SkillsSection } from "./components/SkillsSection";
 import { WhoAmISection } from "./components/WhoAmISection";
 import { navLinks } from "./data/portfolio";
 
-const observedSectionIds = ["about", "skills", "projects", "contact"];
+const observedSectionIds = ["about", "skills", "experience", "education", "contact"];
 
 export default function App() {
   const [activeSection, setActiveSection] = useState("about");
@@ -20,7 +21,7 @@ export default function App() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    document.title = "Zahurul Haque Nill | Premium Developer Portfolio";
+    document.title = "Md Jahurul Haque | Marketing & Customer Relations Professional";
   }, []);
 
   useEffect(() => {
@@ -147,7 +148,8 @@ export default function App() {
 
         <WhoAmISection />
         <SkillsSection />
-        <ProjectsSection />
+        <ExperienceSection />
+        <EducationSection />
         <ContactSection />
       </main>
 

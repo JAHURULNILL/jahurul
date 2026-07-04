@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { person, profileIntroBlocks } from "../data/portfolio";
+import { person, profileIntroBlocks, keyStrengths, languages } from "../data/portfolio";
 import { useRotatingTypewriter } from "../hooks/useRotatingTypewriter";
 import { Reveal } from "./Reveal";
 
@@ -41,10 +41,10 @@ export function WhoAmISection() {
 
                 <div className="flex-1">
                   <p className="font-mono text-[0.98rem] font-medium tracking-[0.08em] text-[#aef6d7] sm:text-[1.06rem]">
-                    Zahurul Haque Nill
+                    Md Jahurul Haque
                   </p>
                   <h3 className="text-balance mt-3 text-2xl font-bold tracking-[-0.05em] text-white sm:text-[2rem]">
-                    Student | Prompt Engineer | Digital Marketer
+                    Marketing & Customer Relations Professional
                   </h3>
                   <div className="mt-4 min-h-[7rem] max-w-2xl">
                     <p className="font-mono text-[0.92rem] leading-8 text-[#b0bdd1] sm:text-[0.98rem]">
@@ -59,9 +59,10 @@ export function WhoAmISection() {
             </motion.div>
           </Reveal>
 
-          <div className="grid gap-4 md:max-w-xl">
+          <div className="grid gap-4 md:grid-cols-2">
             {[
-              ["Focus", "AI tools, prompt writing, frontend learning, and modern digital creation."],
+              ["Career Objective", "A motivated professional with 3 years of hands-on experience in customer service and banking operations. I work well with people, handle pressure without losing focus, and always make sure the customer leaves satisfied. Looking for a role where I can contribute, grow, and make an impact."],
+              ["Location", `${person.location} · ${person.phone}`],
             ].map(([title, value], index) => (
               <Reveal key={title} delay={0.14 + index * 0.06}>
                 <motion.div
@@ -79,6 +80,60 @@ export function WhoAmISection() {
               </Reveal>
             ))}
           </div>
+
+          {/* Key Strengths */}
+          <Reveal delay={0.26}>
+            <motion.div
+              whileHover={{ y: -4 }}
+              className="group relative overflow-hidden rounded-[1.2rem] border border-[rgba(106,126,170,0.22)] bg-[linear-gradient(180deg,#1b2536_0%,#212d41_100%)] p-5 shadow-[0_16px_34px_rgba(0,0,0,0.2)] transition-[background-color,border-color,box-shadow,transform] duration-500 hover:border-[var(--accent)]/22 hover:shadow-[0_24px_48px_rgba(0,0,0,0.3)]"
+            >
+              <div className="absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,255,163,0.08),transparent_28%)]" />
+              </div>
+              <div className="relative">
+                <p className="font-mono text-[0.72rem] uppercase tracking-[0.32em] text-[#9ef8d5]">Key Strengths</p>
+                <div className="mt-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+                  {keyStrengths.map((strength) => (
+                    <div
+                      key={strength}
+                      className="flex items-center gap-2.5 rounded-[0.9rem] border border-white/6 bg-[rgba(255,255,255,0.028)] px-3 py-2.5"
+                    >
+                      <span className="inline-flex h-2 w-2 shrink-0 rounded-full bg-[var(--accent)]" />
+                      <p className="text-[0.92rem] font-medium tracking-[-0.02em] text-[#d7deeb]">{strength}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </Reveal>
+
+          {/* Languages */}
+          <Reveal delay={0.32}>
+            <motion.div
+              whileHover={{ y: -4 }}
+              className="group relative overflow-hidden rounded-[1.2rem] border border-[rgba(106,126,170,0.22)] bg-[linear-gradient(180deg,#1b2536_0%,#212d41_100%)] p-5 shadow-[0_16px_34px_rgba(0,0,0,0.2)] transition-[background-color,border-color,box-shadow,transform] duration-500 hover:border-[var(--accent)]/22 hover:shadow-[0_24px_48px_rgba(0,0,0,0.3)]"
+            >
+              <div className="absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,255,163,0.08),transparent_28%)]" />
+              </div>
+              <div className="relative">
+                <p className="font-mono text-[0.72rem] uppercase tracking-[0.32em] text-[#9ef8d5]">Languages</p>
+                <div className="mt-4 flex flex-wrap gap-3">
+                  {languages.map((lang) => (
+                    <div
+                      key={lang.name}
+                      className="flex items-center gap-2.5 rounded-full border border-white/10 bg-[rgba(255,255,255,0.03)] px-4 py-2.5"
+                    >
+                      <span className="text-[0.95rem] font-medium text-white">{lang.name}</span>
+                      <span className="rounded-full border border-[var(--accent)]/16 bg-[rgba(0,255,163,0.08)] px-2.5 py-0.5 font-mono text-[0.7rem] tracking-[0.08em] text-[var(--accent-soft)]">
+                        {lang.level}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </Reveal>
         </div>
       </div>
     </section>

@@ -1,9 +1,11 @@
 export const person = {
-  name: "Zahurul Haque Nill",
-  brand: "Zahurul",
-  role: "Student | Prompt Engineer | Digital Marketer",
+  name: "Md Jahurul Haque",
+  brand: "Jahurul",
+  role: "Marketing & Customer Relations Professional",
   email: "jahurul4q@gmail.com",
-  location: "Bangladesh",
+  phone: "+880 1799-298672",
+  location: "Baghulpur, Sujanagar, Pabna, Bangladesh",
+  website: "zahurul.pro.bd",
   photo:
     "https://raw.githubusercontent.com/JAHURULNILL/jahurul/refs/heads/main/zahurul_pic.png",
   github: "https://github.com/JAHURULNILL",
@@ -14,7 +16,8 @@ export const person = {
 export const navLinks = [
   { id: "about", href: "#about", label: "About" },
   { id: "skills", href: "#skills", label: "Skills" },
-  { id: "projects", href: "#projects", label: "Projects" },
+  { id: "experience", href: "#experience", label: "Experience" },
+  { id: "education", href: "#education", label: "Education" },
   { id: "contact", href: "#contact", label: "Let's Talk" },
 ];
 
@@ -22,130 +25,154 @@ export const heroTerminalBlocks = [
   [
     "> cat profile.json",
     "{",
-    '  "role": "Student | Prompt Engineer | Digital Marketer",',
-    '  "focus": "Frontend learning, AI tools, creative work"',
+    '  "role": "Marketing & Customer Relations Professional",',
+    '  "focus": "Customer Service, Banking Operations, Digital Marketing"',
     "}",
   ].join("\n"),
   [
-    "> cat skills.ts",
-    "const skills = [",
-    '  "Prompt Engineering",',
-    '  "AI Tools",',
-    '  "Digital Marketing",',
-    '  "Frontend Development"',
+    "> cat experience.ts",
+    "const experience = [",
+    '  "Dutch-Bangla Bank Limited (2021–2024)",',
+    '  "Agent Banking Representative",',
+    '  "3 Years Hands-on Experience"',
     "]",
   ].join("\n"),
   [
-    "> cat mission.md",
-    "Building modern, premium, and useful digital experiences",
-    "with creativity, learning, and smart problem solving.",
+    "> cat objective.md",
+    "A motivated professional with 3 years of hands-on",
+    "experience in customer service and banking operations.",
+    "Looking to contribute, grow, and make an impact.",
   ].join("\n"),
 ];
 
 export const whoAmIBlocks = [
   [
     "identity.md",
-    "Zahurul Haque Nill",
-    "Student",
-    "Prompt Engineer",
-    "Digital Marketer",
+    "Md Jahurul Haque",
+    "Marketing & Customer Relations Professional",
+    "Agent Banking Representative",
+    "BBA in Marketing Student",
   ].join("\n"),
   [
-    "focus.ts",
-    "const focus = [",
-    '  "AI tools",',
-    '  "prompt writing",',
-    '  "frontend learning",',
-    '  "modern digital creation"',
+    "strengths.ts",
+    "const strengths = [",
+    '  "Customer Relationship Management",',
+    '  "Effective Communicator",',
+    '  "Quick Learner & Adaptable",',
+    '  "Detail-Oriented Record Keeping"',
     "]",
   ].join("\n"),
   [
     "mission.md",
-    "Growing as a creative, tech-focused professional",
-    "while building premium digital experiences",
-    "through continuous learning and thoughtful execution.",
+    "A motivated professional with hands-on experience",
+    "in customer service and banking operations.",
+    "Ready to contribute and grow with the organization.",
   ].join("\n"),
 ].map((block) => `> cat ${block}`);
 
 export const profileIntroBlocks = [
-  "I'm building my path through AI tools, creative digital work, and modern frontend learning with a focus on polished experiences.",
-  "I enjoy blending prompt thinking, design awareness, and digital strategy into work that feels clean, useful, and modern.",
-  "My goal is to keep learning, keep improving, and create premium digital experiences with thoughtful execution.",
+  "A motivated professional with 3 years of hands-on experience in customer service and banking operations. I work well with people, handle pressure without losing focus, and always make sure the customer leaves satisfied.",
+  "I am looking for a role where I can bring this attitude, contribute to the team, and grow with the organization. Strong in customer handling, cash management, and digital marketing.",
+  "Detail-oriented with proven experience in financial record keeping, rural and semi-urban client service, and compliance coordination with branch officials.",
 ];
 
 export const skills = [
   {
-    title: "Prompt Engineering",
+    title: "Customer Service",
     items: [
-      { label: "Structured prompting", level: "92%" },
-      { label: "Output logic", level: "84%" },
-      { label: "Prompt optimization", level: "88%" },
-      { label: "AI instruction design", level: "81%" },
+      { label: "Customer Handling", level: "95%" },
+      { label: "Complaint Resolution", level: "92%" },
+      { label: "Client Relationship Management", level: "90%" },
+      { label: "Communication", level: "93%" },
     ],
   },
   {
-    title: "AI Tools",
+    title: "Banking & Finance",
     items: [
-      { label: "Workflow exploration", level: "89%" },
-      { label: "Tool chaining", level: "82%" },
-      { label: "Creative automation", level: "85%" },
-      { label: "AI-assisted research", level: "78%" },
+      { label: "Cash Management", level: "94%" },
+      { label: "Transaction Processing", level: "93%" },
+      { label: "Account Opening & Documentation", level: "90%" },
+      { label: "Financial Record Keeping", level: "91%" },
     ],
   },
   {
     title: "Digital Marketing",
     items: [
-      { label: "Content direction", level: "87%" },
-      { label: "Campaign thinking", level: "83%" },
-      { label: "Audience clarity", level: "79%" },
-      { label: "Digital positioning", level: "86%" },
+      { label: "Content Strategy", level: "85%" },
+      { label: "Digital Positioning", level: "82%" },
+      { label: "Campaign Planning", level: "80%" },
+      { label: "Audience Targeting", level: "83%" },
     ],
   },
   {
-    title: "Frontend Development",
+    title: "Professional Skills",
     items: [
-      { label: "React & TypeScript", level: "80%" },
-      { label: "Tailwind CSS", level: "84%" },
-      { label: "Responsive UI", level: "78%" },
-      { label: "Interaction polish", level: "76%" },
+      { label: "MS Word / Excel", level: "88%" },
+      { label: "Problem Solving", level: "90%" },
+      { label: "Time Management", level: "87%" },
+      { label: "Leadership & Teamwork", level: "85%" },
     ],
   },
   {
-    title: "Problem Solving",
+    title: "Technology & Internet",
     items: [
-      { label: "Clear breakdowns", level: "88%" },
-      { label: "Practical solutions", level: "90%" },
-      { label: "Creative thinking", level: "82%" },
-      { label: "Continuous learning", level: "91%" },
+      { label: "Internet & Web Browsing", level: "92%" },
+      { label: "Website Management", level: "80%" },
+      { label: "Software Knowledge", level: "82%" },
+      { label: "AI Tools & Applications", level: "78%" },
     ],
   },
 ];
 
-export const projects = [
+export const experience = [
   {
-    title: "Prompt Workspace",
-    eyebrow: "AI Concept",
-    summary: "A clean prompt hub for saving, organizing, and reusing smarter AI workflows.",
-    tags: ["Prompt Design", "Workflow"],
-    accent: "from-[rgba(0,255,163,0.18)] to-transparent",
-    meta: "Premium system idea",
+    company: "Dutch-Bangla Bank Limited",
+    position: "Agent Banking Representative",
+    duration: "2021 – 2024 | 3 Years",
+    responsibilities: [
+      "Processed daily banking transactions — deposits, withdrawals, and fund transfers — with full accuracy and zero discrepancies.",
+      "Opened new customer accounts and guided clients through required documentation step by step.",
+      "Maintained daily financial records and prepared end-of-day transaction reports consistently.",
+      "Served rural and semi-urban clients with patience and professionalism, often resolving issues on the spot.",
+      "Handled customer complaints directly and followed through until each case was fully resolved.",
+      "Coordinated with branch officials to ensure all operations met compliance standards.",
+    ],
+  },
+];
+
+export const education = [
+  {
+    degree: "BBA in Marketing (4th Year Running)",
+    institution: "National University, Bangladesh",
+    year: "2021 – Present",
+    gpa: "",
   },
   {
-    title: "Digital Growth Landing",
-    eyebrow: "Brand Page",
-    summary: "A polished landing experience focused on clarity, trust, and premium presentation.",
-    tags: ["Landing Page", "UX"],
-    accent: "from-[rgba(101,163,255,0.18)] to-transparent",
-    meta: "Conversion-first design",
+    degree: "Higher Secondary Certificate (HSC)",
+    institution: "Govt. Dr. Zahurul Kamal Degree (Hons.) College, Pabna",
+    year: "Rajshahi Board — 2020",
+    gpa: "GPA: 3.67",
   },
   {
-    title: "Creative Frontend Lab",
-    eyebrow: "UI Practice",
-    summary: "A dark UI playground for testing layout, motion, and responsive design ideas.",
-    tags: ["React", "Motion"],
-    accent: "from-[rgba(192,168,255,0.16)] to-transparent",
-    meta: "Refined visual experiments",
+    degree: "Secondary School Certificate (SSC)",
+    institution: "Alhaj Iman Ali High School, Pabna",
+    year: "Rajshahi Board — 2018",
+    gpa: "GPA: 3.50",
   },
+];
+
+export const keyStrengths = [
+  "Strong Customer Relationship Management",
+  "Effective Communicator in Bengali & English",
+  "Resilient, Empathetic & Community-Focused",
+  "Quick Learner with High Adaptability",
+  "Detail-Oriented Financial Record Keeping",
+  "Leadership & Teamwork in Group Settings",
+];
+
+export const languages = [
+  { name: "Bengali", level: "Native" },
+  { name: "English", level: "Proficient" },
 ];
 
 export const contactLinks = [

@@ -123,7 +123,7 @@ export function HeroTerminal() {
             <span className="h-3 w-3 rounded-full bg-[#34d399]" />
           </div>
           <div className="rounded-full border border-[rgba(140,156,194,0.14)] bg-[rgba(255,255,255,0.025)] px-3 py-1 font-mono text-[0.68rem] tracking-[0.22em] text-[#8e99b1]">
-            zahurul@portfolio:~
+            jahurul@portfolio:~
           </div>
         </div>
 
