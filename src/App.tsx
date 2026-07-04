@@ -6,7 +6,7 @@ import { EducationSection } from "./components/EducationSection";
 import { ExperienceSection } from "./components/ExperienceSection";
 import { Footer } from "./components/Footer";
 import { HeroHeading } from "./components/HeroHeading";
-import { HeroTerminal } from "./components/HeroTerminal";
+import { HeroProfileCard } from "./components/HeroTerminal";
 import { Navbar } from "./components/Navbar";
 import { QuickContactPopup } from "./components/QuickContactPopup";
 import { SkillsSection } from "./components/SkillsSection";
@@ -141,7 +141,7 @@ export default function App() {
               <HeroHeading />
             </div>
             <div className="order-1 lg:order-2">
-              <HeroTerminal />
+              <HeroProfileCard />
             </div>
           </div>
         </section>

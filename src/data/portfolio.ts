@@ -4,13 +4,13 @@ export const person = {
   role: "Marketing & Customer Relations Professional",
   email: "jahurul4q@gmail.com",
   phone: "+880 1799-298672",
+  whatsapp: "8801799298672",
   location: "Baghulpur, Sujanagar, Pabna, Bangladesh",
-  website: "zahurul.pro.bd",
   photo:
     "https://raw.githubusercontent.com/JAHURULNILL/jahurul/refs/heads/main/zahurul_pic.png",
   github: "https://github.com/JAHURULNILL",
   facebook: "https://fb.com/error.nill",
-  linkedin: "https://www.linkedin.com/",
+  linkedin: "https://www.linkedin.com/in/md-jahurul-haque",
 };
 
 export const navLinks = [
@@ -21,28 +21,18 @@ export const navLinks = [
   { id: "contact", href: "#contact", label: "Let's Talk" },
 ];
 
-export const heroTerminalBlocks = [
-  [
-    "> cat profile.json",
-    "{",
-    '  "role": "Marketing & Customer Relations Professional",',
-    '  "focus": "Customer Service, Banking Operations, Digital Marketing"',
-    "}",
-  ].join("\n"),
-  [
-    "> cat experience.ts",
-    "const experience = [",
-    '  "Dutch-Bangla Bank Limited (2021–2024)",',
-    '  "Agent Banking Representative",',
-    '  "3 Years Hands-on Experience"',
-    "]",
-  ].join("\n"),
-  [
-    "> cat objective.md",
-    "A motivated professional with 3 years of hands-on",
-    "experience in customer service and banking operations.",
-    "Looking to contribute, grow, and make an impact.",
-  ].join("\n"),
+export const heroHighlights = [
+  { label: "Years Experience", value: "3+" },
+  { label: "Accounts Opened", value: "1,200+" },
+  { label: "Daily Transactions", value: "30+" },
+  { label: "Total Transactions", value: "23,000+" },
+];
+
+export const heroRotatingTexts = [
+  "Agent Banking Representative at Dutch-Bangla Bank",
+  "3 Years of Customer Service & Banking Operations",
+  "Strong in Cash Management & Client Relations",
+  "BBA in Marketing Student — Ready to Grow",
 ];
 
 export const whoAmIBlocks = [
@@ -177,18 +167,23 @@ export const languages = [
 
 export const contactLinks = [
   {
+    label: "WhatsApp",
+    href: `https://wa.me/${person.whatsapp}`,
+    external: true,
+  },
+  {
     label: "Email",
     href: `mailto:${person.email}`,
     external: false,
   },
   {
-    label: "GitHub",
-    href: person.github,
-    external: true,
+    label: "Phone",
+    href: `tel:${person.phone.replace(/[\s-]/g, "")}`,
+    external: false,
   },
   {
-    label: "Facebook",
-    href: person.facebook,
+    label: "LinkedIn",
+    href: person.linkedin,
     external: true,
   },
 ];

@@ -6,11 +6,17 @@ export function Footer() {
       <div className="mx-auto flex max-w-7xl flex-col gap-4 border-t border-white/8 px-1 pt-8 text-sm text-white/52 sm:flex-row sm:items-center sm:justify-between">
         <p className="tracking-[0.01em]">&copy; {new Date().getFullYear()} {person.name}. All rights reserved.</p>
         <div className="flex flex-wrap items-center gap-5">
-          <a href={person.github} target="_blank" rel="noreferrer" className="transition duration-300 hover:text-white/84">
-            GitHub
+          <a href={person.linkedin} target="_blank" rel="noreferrer" className="transition duration-300 hover:text-white/84">
+            LinkedIn
+          </a>
+          <a href={`https://wa.me/${person.whatsapp}`} target="_blank" rel="noreferrer" className="transition duration-300 hover:text-white/84">
+            WhatsApp
           </a>
           <a href={person.facebook} target="_blank" rel="noreferrer" className="transition duration-300 hover:text-white/84">
             Facebook
+          </a>
+          <a href={person.github} target="_blank" rel="noreferrer" className="transition duration-300 hover:text-white/84">
+            GitHub
           </a>
         </div>
       </div>
