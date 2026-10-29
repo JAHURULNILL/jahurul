@@ -17,6 +17,7 @@ export const navLinks = [
   { id: "about", href: "#about", label: "About" },
   { id: "skills", href: "#skills", label: "Skills" },
   { id: "experience", href: "#experience", label: "Experience" },
+  { id: "projects", href: "#projects", label: "Projects" },
   { id: "education", href: "#education", label: "Education" },
   { id: "contact", href: "#contact", label: "Let's Talk" },
 ];
@@ -148,6 +149,42 @@ export const education = [
     institution: "Alhaj Iman Ali High School, Pabna",
     year: "Rajshahi Board — 2018",
     gpa: "GPA: 3.50",
+  },
+];
+
+export const projects = [
+  {
+    eyebrow: "Desktop Software",
+    title: "NDM — Nill Download Manager",
+    summary:
+      "An IDM-style download manager for Linux and Windows, designed and built from scratch. Fast multi-connection downloads, a browser companion that catches downloads and video as you browse, and one-click video saving with quality selection — all in a clean glass interface.",
+    tags: ["Rust", "Tauri", "Linux + Windows", "Browser Extension"],
+    meta: "Open Source · v1.8.0",
+    accent: "from-emerald-400/60 via-teal-500/20 to-transparent",
+    link: "https://ndm.zahurul.tech",
+    cta: "Visit site",
+  },
+  {
+    eyebrow: "Web App",
+    title: "Personal Dashboard",
+    summary:
+      "My daily command center in Bengali — job applications, learning progress, quotes, news and fascinating facts in one calm, glass-styled page. It refreshes itself every morning, so each day opens with a new edition.",
+    tags: ["JavaScript", "Vercel", "Daily Automation"],
+    meta: "Live · Updated Daily",
+    accent: "from-sky-400/55 via-indigo-500/20 to-transparent",
+    link: "https://dashboard.zahurul.tech",
+    cta: "Open dashboard",
+  },
+  {
+    eyebrow: "YouTube Channel",
+    title: "Obak Prithibi TV",
+    summary:
+      "A Bengali documentary channel I created — short, carefully researched films about the wonders of our world, with warm narration and frame-perfect editing. Every episode is produced end to end by me.",
+    tags: ["Documentary Shorts", "Bengali", "Video Production"],
+    meta: "YouTube · @ObakPrithibiTV",
+    accent: "from-rose-400/55 via-orange-400/20 to-transparent",
+    link: "https://www.youtube.com/@ObakPrithibiTV",
+    cta: "Watch channel",
   },
 ];
 

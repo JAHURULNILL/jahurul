@@ -17,10 +17,10 @@ export function ProjectsSection() {
 
         <div className="mt-12 grid gap-5 lg:grid-cols-3">
           {projects.map((project, index) => (
-            <Reveal key={project.title} delay={index * 0.08}>
+            <Reveal key={project.title} delay={index * 0.08} className="h-full">
               <motion.article
                 whileHover={{ y: -7 }}
-                className="premium-panel premium-ring group relative overflow-hidden rounded-[1.08rem] border border-[rgba(115,132,172,0.18)] p-5 transition-[background-color,border-color,box-shadow,transform] duration-500 active:border-white/16 active:bg-[linear-gradient(180deg,rgba(17,24,38,0.98),rgba(14,20,32,0.96))] hover:border-[rgba(178,192,220,0.22)] hover:shadow-[0_30px_66px_rgba(0,0,0,0.36)]"
+                className="premium-panel premium-ring group relative h-full overflow-hidden rounded-[1.08rem] border border-[rgba(115,132,172,0.18)] p-5 transition-[background-color,border-color,box-shadow,transform] duration-500 active:border-white/16 active:bg-[linear-gradient(180deg,rgba(17,24,38,0.98),rgba(14,20,32,0.96))] hover:border-[rgba(178,192,220,0.22)] hover:shadow-[0_30px_66px_rgba(0,0,0,0.36)]"
               >
                 <div className={`absolute inset-x-0 top-0 h-24 bg-gradient-to-br ${project.accent} opacity-90`} />
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.05),transparent_24%),radial-gradient(circle_at_bottom_left,rgba(0,255,163,0.04),transparent_26%)] opacity-0 transition duration-500 group-hover:opacity-100" />
@@ -39,7 +39,7 @@ export function ProjectsSection() {
 
                   <p className="mt-3 text-[0.93rem] leading-7 text-[#b1bfd3]">{project.summary}</p>
 
-                  <div className="mt-5 flex flex-wrap gap-2">
+                  <div className="mb-6 mt-5 flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
@@ -50,12 +50,24 @@ export function ProjectsSection() {
                     ))}
                   </div>
 
-                  <div className="mt-6 flex items-center justify-between border-t border-white/8 pt-4">
+                  <div className="mt-auto flex items-center justify-between border-t border-white/8 pt-4">
                     <span className="text-sm font-medium text-white/72">{project.meta}</span>
-                    <span className="inline-flex items-center gap-2 text-[0.78rem] font-medium text-[var(--accent-soft)] transition duration-300 group-hover:translate-x-1">
-                      View idea
-                      <span aria-hidden="true">&rarr;</span>
-                    </span>
+                    {project.link ? (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-[0.78rem] font-medium text-[var(--accent-soft)] transition duration-300 group-hover:translate-x-1"
+                      >
+                        {project.cta ?? "View idea"}
+                        <span aria-hidden="true">&rarr;</span>
+                      </a>
+                    ) : (
+                      <span className="inline-flex items-center gap-2 text-[0.78rem] font-medium text-[var(--accent-soft)] transition duration-300 group-hover:translate-x-1">
+                        View idea
+                        <span aria-hidden="true">&rarr;</span>
+                      </span>
+                    )}
                   </div>
                 </div>
               </motion.article>

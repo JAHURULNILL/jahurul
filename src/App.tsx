@@ -9,11 +9,12 @@ import { HeroHeading } from "./components/HeroHeading";
 import { HeroProfileCard } from "./components/HeroTerminal";
 import { Navbar } from "./components/Navbar";
 import { QuickContactPopup } from "./components/QuickContactPopup";
+import { ProjectsSection } from "./components/ProjectsSection";
 import { SkillsSection } from "./components/SkillsSection";
 import { WhoAmISection } from "./components/WhoAmISection";
 import { navLinks } from "./data/portfolio";
 
-const observedSectionIds = ["about", "skills", "experience", "education", "contact"];
+const observedSectionIds = ["about", "skills", "experience", "projects", "education", "contact"];
 
 export default function App() {
   const [activeSection, setActiveSection] = useState("about");
@@ -149,6 +150,7 @@ export default function App() {
         <WhoAmISection />
         <SkillsSection />
         <ExperienceSection />
+        <ProjectsSection />
         <EducationSection />
         <ContactSection />
       </main>
