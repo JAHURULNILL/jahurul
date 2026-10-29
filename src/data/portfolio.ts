@@ -164,28 +164,6 @@ export const projects = [
     link: "https://ndm.zahurul.tech",
     cta: "Visit site",
   },
-  {
-    eyebrow: "Web App",
-    title: "Personal Dashboard",
-    summary:
-      "My daily command center in Bengali — job applications, learning progress, quotes, news and fascinating facts in one calm, glass-styled page. It refreshes itself every morning, so each day opens with a new edition.",
-    tags: ["JavaScript", "Vercel", "Daily Automation"],
-    meta: "Live · Updated Daily",
-    accent: "from-sky-400/55 via-indigo-500/20 to-transparent",
-    link: "https://dashboard.zahurul.tech",
-    cta: "Open dashboard",
-  },
-  {
-    eyebrow: "YouTube Channel",
-    title: "Obak Prithibi TV",
-    summary:
-      "A Bengali documentary channel I created — short, carefully researched films about the wonders of our world, with warm narration and frame-perfect editing. Every episode is produced end to end by me.",
-    tags: ["Documentary Shorts", "Bengali", "Video Production"],
-    meta: "YouTube · @ObakPrithibiTV",
-    accent: "from-rose-400/55 via-orange-400/20 to-transparent",
-    link: "https://www.youtube.com/@ObakPrithibiTV",
-    cta: "Watch channel",
-  },
 ];
 
 export const keyStrengths = [

@@ -11,13 +11,17 @@ export function ProjectsSection() {
           <SectionHeading
             eyebrow=""
             title="Projects"
-            description="A few selected ideas that reflect how I approach premium interfaces, digital clarity, and modern creative work."
+            description="A selected project that reflects how I approach premium interfaces, digital clarity, and modern creative work."
           />
         </Reveal>
 
         <div className="mt-12 grid gap-5 lg:grid-cols-3">
           {projects.map((project, index) => (
-            <Reveal key={project.title} delay={index * 0.08} className="h-full">
+            <Reveal
+              key={project.title}
+              delay={index * 0.08}
+              className={`h-full ${projects.length === 1 ? "lg:col-start-2" : ""}`}
+            >
               <motion.article
                 whileHover={{ y: -7 }}
                 className="premium-panel premium-ring group relative h-full overflow-hidden rounded-[1.08rem] border border-[rgba(115,132,172,0.18)] p-5 transition-[background-color,border-color,box-shadow,transform] duration-500 active:border-white/16 active:bg-[linear-gradient(180deg,rgba(17,24,38,0.98),rgba(14,20,32,0.96))] hover:border-[rgba(178,192,220,0.22)] hover:shadow-[0_30px_66px_rgba(0,0,0,0.36)]"
